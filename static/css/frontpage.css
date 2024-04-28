@@ -12,7 +12,6 @@ a {
 h1,h2 {
     font-family: GTSuper;
     font-weight: 400;
-    color: #021329
 }
 h2 {
     font-size: 32px
@@ -61,7 +60,6 @@ p {
     z-index: 99;
     padding: 0 80px;
 }
-
 .Navigation_wrapper__yQJIS {
     max-width: 1600px;
     display: flex;
@@ -70,11 +68,9 @@ p {
     align-items: center;
     height: 66px
 }
-
 .Navigation_navlinks__uv5aW {
     display: flex
 }
-
 .Navigation_navlinks__uv5aW a {
     height: 66px;
     line-height: 18px;
@@ -92,21 +88,16 @@ p {
     letter-spacing: 1.8px;
     text-align: center
 }
-
 .Navigation_navlinks__uv5aW a:hover {
     border-bottom: 2px solid #ce0d2a;
     color: #ce0d2a
 }
-
 .Navigation_navlinks__uv5aW a.Navigation_active__1KqYp {
     border-bottom: 2px solid #ce0d2a
 }
-
-
 .Navigation_shadow__s3CYm {
     display: none
 }
-
 .Navigation_navlink__SUfAw {
     displaY: none
 }
@@ -117,13 +108,9 @@ p {
         padding: 0 27px;
         box-shadow: none
     }
-
     .Navigation_navigation__eSStv .Navigation_wrapper__yQJIS {
         height: 66px
     }
-
-
-
     .Navigation_navlinks__uv5aW {
         display: block;
         position: fixed;
@@ -133,20 +120,17 @@ p {
         top: 66px;
         box-shadow: 0 3px 16px 0 rgba(0,0,0,.16);
         right: -100vw;
-        transition: all .5s ease-in-out
+        transition: all .2s ease-in-out
     }
-
     .Navigation_navlinks__uv5aW a {
         font-size: 14px;
         text-align: right;
         height: 30px;
         margin-top: 20px
     }
-
     .Navigation_navigation__eSStv.Navigation_open__Z9JaI .Navigation_navlinks__uv5aW {
         right: 0; /* Make sidebar visible */
     }
-
     .Navigation_shadow__s3CYm {
         position: absolute;
         display: block;
@@ -157,7 +141,6 @@ p {
         box-shadow: 0 3px 6px 0 rgba(0,0,0,.16);
         pointer-events: none
     }
-
     .Navigation_navlink__SUfAw {
         display: block;
         position: absolute;
@@ -166,7 +149,6 @@ p {
         right: 0;
         top: 0
     }
-
     .Navigation_navlink__SUfAw:after,.Navigation_navlink__SUfAw:before {
         content: "";
         background-color: #ff5355;
@@ -176,9 +158,157 @@ p {
         top: 34px;
         right: 31px
     }
-
     .Navigation_navlink__SUfAw:after {
         width: 17px;
         top: 45px
     }
+}
+
+
+/* main settings -------------------------------------------------------------------------------- */
+.section {
+    position: absolute;
+    scroll-snap-align: start;
+    min-height: 100vh;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* SECTION 1 -------------------------------------------------------------------------------- */
+.section_1_back {
+    left: 0px;
+    right: 0px;
+    top: 0vh; /* Start at the top of the viewport */
+    position: absolute;
+    height: 100vh;
+    background-color: #fff;
+}
+.section_1 {
+    left: 80px;
+    right: 80px;
+    position: absolute;
+    color: #000;
+}
+
+/* SECTION 2 -------------------------------------------------------------------------------- */
+.section_2_back {
+    left: 0px;
+    right: 0px;
+    top: 100vh; /* Starts immediately after section 1 */
+    position: absolute;
+    height: 100vh;
+    background-color: #021329;
+}
+.section_2 {
+    left: 80px;
+    right: 80px;
+    position: absolute;
+    color: #fff;
+}
+.section_2_title {
+    margin-top: 100px;
+    color: #ff5355;
+}
+
+/* SECTION 3 -------------------------------------------------------------------------------- */
+.section_3_back {
+    left: 0px;
+    right: 0px;
+    top: 200vh; /* Starts immediately after section 1 */
+    position: absolute;
+    height: 100vh;
+    background-color: #fff;
+}
+.section_3 {
+    left: 80px;
+    right: 80px;
+    position: absolute;
+    color: #000;
+}
+.section_3_title {
+    margin-top: 100px;
+}
+
+
+/* SECTION 4 -------------------------------------------------------------------------------- */
+.section_3_back {
+    left: 0px;
+    right: 0px;
+    top: 300vh; /* Starts immediately after section 1 */
+    position: absolute;
+    height: 100vh;
+    background-color: #021329;
+}
+.section_3 {
+    left: 80px;
+    right: 80px;
+    position: absolute;
+    color: #fff;
+}
+.section_3_title {
+    margin-top: 100px;
+    color: #ff5355;
+}
+
+
+
+
+
+/* FOOTER -------------------------------------------------------------------------------- */
+.Footer_footer__Q5T55 {
+    border-top: 0.5px solid #999;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.16);
+    background-color: #021329;
+    color: #fff;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    top: 400vh;
+    position: absolute;
+}
+
+.Footer_wrapper__fRar6 {
+    max-width: 1600px;
+    padding: 0 80px;
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    gap: 94px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    font-family: proxima-nova,sans-serif;
+    font-weight: 300;
+    font-size: 14px
+}
+
+.Footer_navlinks__asLrJ {
+    display: block
+}
+
+.Footer_navlinks__asLrJ img {
+    margin-bottom: 30px
+}
+
+.Footer_navlinks__asLrJ a {
+    font-size: 14px;
+    padding: 0 20px;
+    border-left: 1px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ff5355
+}
+
+.Footer_navlinks__asLrJ a:first-of-type {
+    padding-left: 0;
+    border-left: 0 solid transparent
+}
+
+.Footer_copyright__waMAS p {
+    font-size: 14px;
+    line-height: 18px
 }
