@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbitrage Bettors - Odds</title>
+    <link rel="icon" type="image/png" href="/pictures/browserlogo">
+        <style>
+
+    body {
+      background-color: #F8F8F8;
+      color: #000000;
+    }
+
+    .nav-logo {
+      margin-right: 25%;
+    }
+    .nav-logo img {
+      margin-top: 6px;
+      margin-left: 2.5%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 44px;
+    }
+    @media (max-width: 600px) {
+      /* Styles for mobile screens */
+      .nav-header .primary-nav .left-nav li {
+        margin-left: 0px;
+        height: 20%;
+      }
+    }
+
+    .nav-header {
+      font-family: arial, sans-serif;
+      background-color: #071d44;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      position: fixed;
+      height: 55px;
+      top: 0;
+      width: 100%;
+      left: 0px;
+      border-bottom: 1px solid #48adff;
+      z-index: 1;
+    }
+    .nav-header ul {
+      list-style-type: none;
+      margin: 0px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-header .primary-nav .left-nav li {
+      font-size: 12px;
+      margin-right: 1%;
+    }
+    .nav-header .primary-nav .left-nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0;
+      font-size: 120%;
+      transition: background-color 0.2s ease;
+      display: inline-block;
+      padding: 5px 10px;
+      position: relative;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .nav-header .primary-nav .left-nav a:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: #fff;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+    .nav-header .primary-nav .left-nav a:hover:after {
+      width: 80%;
+      left: 10%;
+    }
+    .nav-header .primary-nav .api li {
+      justify-content: space-between;
+      margin-right: 220px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+
+    .nav-header .primary-nav .right-nav a:hover {
+      color: #DCDCDC;
+    }
+    .right-nav li {
+      margin-right: 15px;
+      font-size: 12px;
+    }
+    .right-nav li {
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+    }
+    .right-nav .login {
+      border-radius: 26px;
+      padding: 8px 12px;
+      background-color: #000020;
+      color: #fff;
+      text-decoration: none;
+      border: 2px solid #48adff;
+    }
+    .right-nav .registration {
+      border-radius: 26px;
+      padding: 8px 12px;
+      background-color: #000020;
+      color: #fff;
+      text-decoration: none;
+      border: 2px solid #48adff;
+    }
+    @media (max-width: 600px) {
+      /* Styles for mobile screens */
+      .right-nav li {
+        margin-right: 10px;
+      }
+    }
+
+   .primary-nav .right-nav {
+      right: 0px;
+      position: absolute;
+      margin-right: 2.5%;
+    }
+    .right-nav .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    .right-nav .dropdown .dropbtn {
+      font-size: 20px;
+      border: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit; /* Important for vertical align on mobile phones */
+    }
+    .right-nav .dropdown-content {
+      font-size: 20px;
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    .right-nav .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 6px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    .right-nav .dropdown-content a:hover {
+      background-color: #DCDCDC;
+    }
+    .primary-nav .right-nav .dropdown:hover .dropdown-content {
+      display: block;
+      z-index: 2;
+    }
+
+
+
+
+
+
+
+    .sports-filter-background {
+      height: 300px;
+      width: 19%;
+      z-index: -1;
+      background-color: #FFFFFF;
+      position: fixed;
+      top: 80px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.07);
+      left: 2.5%;
+    }
+    .header-left {
+     font-family: arial, sans-serif;
+     font-size: 20px;
+     margin-top: 0px;
+     color: #999999;
+     text-align: left;
+     position: absolute;
+    }
+    .second-header-left {
+     font-family: arial, sans-serif;
+     font-size: 16px;
+     margin-top: 70px;
+     color: #999999;
+     text-align: left;
+     position: absolute;
+    }
+
+    .searchbar ul{
+      overflow: visible;
+      background-color: #F0F0F0;
+      margin-top: 88px;
+      width: 500px;
+      left: 0px;
+      height: 34px;
+      position: relative;
+      border-bottom: 1px solid #DCDCDC;
+      border-right: 1px solid #DCDCDC;
+      padding: 0px;
+      border-radius: 10px; /* Adjust the value as needed to control the roundness of the border */
+      margin-left: 23.9%;
+    }
+    .searchbar input {
+      margin-top: 3px;
+      width: 92%;
+      height: 29px;
+      font-size: 14px;
+      color: inherit;
+      border: 1px solid #E0E0E0;
+      border-radius: inherit;
+      background: #ffffff;
+      margin-left: 3.5px;
+      padding: 10px;
+      position: relative;
+    }
+    .searchbar input[type="search"]::placeholder {
+      color: #bbb;
+      font-size: 14px;
+      text-align: left;
+      font-family: arial, sans-serif;
+    }
+    .searchbar button[type="submit"] {
+      border-radius: inherit;
+      font-size: 18px;
+      border: none;
+      position: absolute;
+      margin-left: 0.8%;
+      margin-top: 3px;;
+      border: 1px solid #D0D0D0;
+      border-radius: 1px solid ;
+      opacity: 0.7;
+    }
+    .searchbar button[type="submit"]:hover {
+      border-radius: 1px solid ;;
+    }
+
+
+
+
+
+
+
+    .soccer {
+      font-family: arial, sans-serif;
+      background-color: #FFFFFF;
+      color: #000000;
+      position: fixed;
+      width: 15%;
+      letter-spacing: 0.05em;
+      border-radius: 10px; /* Adjust the value as needed to control the roundness of the border border: 2px solid #48adff; */
+      border: 1px solid #D8D8D8;
+      margin-top: 64px;
+      margin-left: 4%;
+      border-bottom: none;
+      padding: 14px 0px;
+      z-index: 2;
+    }
+    .soccer .dropdown {
+      font-size: 18px;
+      float: bottom;
+      overflow: hidden;
+      font-family: arial, sans-serif;
+      color: #fff;
+      margin-left: 10%
+    }
+    .soccer .dropdown .dropbtn {
+      font-size: 14px;
+      border: none;
+      outline: none;
+      color: #000000;
+      background-color: inherit;
+      font-family: inherit; /* Important for vertical align on mobile phones */
+      margin: 0; /* Important for vertical align on mobile phones */
+      letter-spacing: 0.04em;
+    }
+    .soccer .dropdown-content {
+      font-size: 14px;
+      display: none;
+      position: fixed;
+      background-color: #f9f9f9;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      width: 175px;
+      float: right;
+      margin-left: 4%
+    }
+    .soccer .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 6px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    .soccer:hover .dropdown .dropbtn,
+    .soccer .dropdown-content a:hover {
+      color: #48adff;
+    }
+    .soccer:hover .dropdown-content {
+      display: block;
+      z-index: 1;
+    }
+
+
+
+    .basketball {
+      font-family: arial, sans-serif;
+      background-color: #FFFFFF;
+      color: #000000;
+      position: fixed;
+      width: 15%;
+      letter-spacing: 0.05em;
+      border-radius: 10px; /* Adjust the value as needed to control the roundness of the border border: 2px solid #48adff; */
+      border: 1px solid #D8D8D8;
+      border-bottom: none;
+      margin-left: 4%;
+      margin-top: 116px;
+      padding: 14px 0px;
+      z-index: 1;
+    }
+    .basketball .dropdown {
+      float: bottom;
+      overflow: visible;
+      font-family: arial, sans-serif;
+      color: #fff;
+      margin-left: 10%
+    }
+    .basketball .dropdown .dropbtn {
+      font-size: 14px;
+      border: none;
+      outline: none;
+      color: #000000;
+      background-color: inherit;
+      font-family: inherit; /* Important for vertical align on mobile phones */
+      margin: 0; /* Important for vertical align on mobile phones */
+      letter-spacing: 0.04em;
+    }
+    .basketball .dropdown .dropbtn:hover {
+      color: #48adff;
+    }
+    .basketball .dropdown-content {
+      font-size: 14px;
+      display: none;
+      position: fixed;
+      background-color: #f9f9f9;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      width: 175px;
+      float: right;
+      margin-left: 4%
+    }
+    .basketball .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 6px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    .basketball:hover .dropdown .dropbtn,
+    .basketball .dropdown-content a:hover {
+      color: #48adff;
+    }
+    .basketball:hover .dropdown-content {
+      display: block;
+      z-index: 1;
+    }
+
+
+
+
+    .tennis {
+      font-family: arial, sans-serif;
+      background-color: #FFFFFF;
+      color: #000000;
+      position: fixed;
+      width: 15%;
+      letter-spacing: 0.05em;
+      border-radius: 10px; /* Adjust the value as needed to control the roundness of the border border: 2px solid #48adff; */
+      border: 1px solid #D8D8D8;
+      margin-left: 4%;
+      margin-top: 166px;
+      padding: 14px 0px;
+    }
+    .tennis .dropdown {
+      overflow: visible;
+      font-family: arial, sans-serif;
+      color: #fff;
+      margin-left: 10%
+    }
+    .tennis .dropdown .dropbtn {
+      font-size: 14px;
+      border: none;
+      outline: none;
+      color: #071d44;
+      background-color: inherit;
+      font-family: inherit; /* Important for vertical align on mobile phones */
+      margin: 0; /* Important for vertical align on mobile phones */
+      letter-spacing: 0.04em;
+    }
+    .tennis .dropdown .dropbtn:hover {
+      color: #48adff;
+    }
+    .tennis .dropdown-content {
+      font-size: 14px;
+      display: none;
+      position: fixed;
+      background-color: #f9f9f9;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      width: 175px;
+      float: right;
+      margin-left: 4%
+    }
+    .tennis .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 6px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    .tennis:hover .dropdown .dropbtn,
+    .tennis .dropdown-content a:hover {
+      color: #48adff;
+    }
+    .tennis:hover .dropdown-content {
+      display: block;
+      z-index: 1;
+    }
+
+
+
+
+    .main-searchbar-background {
+      height: 50px;
+      width: 73.5%;
+      z-index: -1;
+      background-color: #FFFFFF;
+      position: absolute;
+      left: 23.65%;
+      bottom: 59px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.07);
+      top: 80px;
+    }
+
+
+
+    .last-trades {
+      width: 73.5%;
+      z-index: -1;
+      background-color: #FFFFFF;
+      position: absolute;
+      font-family: arial, sans-serif;
+      color: #999999;
+      text-align: center;
+      left: 23.7%;
+      right: 2.5%;
+      margin-bottom: 50px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.07);
+      top: 155px;
+    }
+    .last-trades .second-header-left {
+     font-family: arial, sans-serif;
+     font-size: 16px;
+     margin-top: 80px;
+     color: #999999;
+     position: fixed;
+     right: 2.5%;
+     text-align: center;
+    }
+
+
+
+
+
+
+  </style>
+</head>
+<body id="top">
+    <section class="hero">
+        <section class="navigation">
+            <header>
+                <div class="header-content">
+                    <div class="nav-header">
+                        <div class="nav-logo">
+                            <a href="/"><img src="/pictures/logo2_arial"></a>
+                        </div>
+                        <nav>
+                            <ul class="primary-nav">
+                                <ul class="left-nav">
+                                    <li><a href="/surebets">SUREBETS</a></li>
+                                    <li><a href="/valuebets">VALUEBETS</a></li>
+                                    <li><a href="/odds">ODDS</a></li>
+                                    <li><a href="/valuebets/portfolio">PORTFOLIO</a></li>
+                                    <ul class="api">
+                                        <li><a href="/api">API</a></li>
+                                    </ul>
+                                </ul>
+                                <ul class="right-nav">
+                                    <div id="g_id_onload"
+                                         data-client_id="553752819217-gcca1r9nv6bla0rmdju9a9b366mckl2v.apps.googleusercontent.com"
+                                         data-login_uri="https://arbitragebettors.com/login"
+                                         data-auto_prompt="false">
+                                    </div>
+                                    <div class="g_id_signin"
+                                         data-type="standard"
+                                         data-size="large"
+                                         data-theme="outline"
+                                         data-text="sign_in_with"
+                                         data-shape="rectangular"
+                                         data-callback="OnSuccess"
+                                         data-logo_alignment="left">
+                                    </div>
+                                    <li><a href="/login" class="login">LOGIN</a></li>
+                                    <li><a href="/registration" class="registration">REGISTRATION</a></li>
+                                        <div class="dropdown">
+                                            <button class="dropbtn">🏴󠁧󠁢󠁥󠁮󠁧󠁿</button>
+                                            <div class="dropdown-content">
+                                                <a href="/de/odds">🇩🇪</a>
+                                                <a href="/fr/odds">🇫🇷</a>
+                                                <a href="/es/odds">🇪🇸</a>
+                                            </div>
+                                        </div>
+                                    </ul>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="second-nav">
+                        <div class="searchbar">
+                            <ul class="search">
+                                <input type="search" placeholder="Search a match...">
+                                <button type="submit">🔍</button>
+                            </ul>
+                        </div>
+                            <div class="sports-filter-background">
+                                <ul class="header-left">
+                                    <p>ODDS</p>
+                                </ul>
+                                <ul class="second-header-left">
+                                    <p>AVAILABLE SPORTS</p>
+                                </ul>
+                            </div>
+                            <div class="soccer">
+                                <div class="dropdown">
+                                    <button class="dropbtn">⚽&nbsp;&nbsp;&nbsp;&nbsp;SOCCER󠁧󠁢</button>
+                                    <div class="dropdown-content">
+                                        <a href="/odds/soccer/argentina">🇦🇷 <tr>️</tr>  Argentina</a>
+                                        <a href="/odds/soccer/austria">🇦🇹 <tr>️</tr>  Austria</a>
+                                        <a href="/odds/soccer/belgium">🇧🇪 <tr>️</tr>  Belgium</a>
+                                        <a href="/odds/soccer/brazil">🇧🇷 <tr>️</tr>  Brazil</a>
+                                        <a href="/odds/soccer/czechia">🇨🇿 <tr>️</tr>  Czechia</a>
+                                        <a href="/odds/soccer/denmark">🇩🇰 <tr>️</tr>  Denmark</a>
+                                        <a href="/odds/soccer/england">🏴󠁧󠁢󠁥󠁮󠁧󠁿󠁿 <tr>️</tr>  England</a>
+                                        <a href="/odds/soccer/england_cup">🏴󠁧󠁢󠁥󠁮󠁧󠁿󠁿 <tr>️</tr>  England Cup</a>
+                                        <a href="/odds/soccer/france">🇫🇷󠁿 <tr>️</tr>  France</a>
+                                        <a href="/odds/soccer/finland">🇫🇮󠁿 <tr>️</tr>  Finland</a>
+                                        <a href="/odds/soccer/germany">🇩🇪󠁿 <tr>️</tr>  Germany</a>
+                                        <a href="/odds/soccer/germany_cup">🇩🇪󠁿 <tr>️</tr>  Germany Cup</a>
+                                        <a href="/odds/soccer/greece">🇬🇷 <tr>️</tr>  Greece</a>
+                                        <a href="/odds/soccer/italy">🇮🇹 <tr>️</tr>  Italy</a>
+                                        <a href="/odds/soccer/spain">🇪🇸󠁿 <tr>️</tr>  Spain</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="basketball">
+                                <div class="dropdown">
+                                    <button class="dropbtn">🏀&nbsp;&nbsp;&nbsp;&nbsp;BASKETBALL</button>
+                                    <div class="dropdown-content">
+                                        <a href="/odds/basketball/england">🏴󠁧󠁢󠁥󠁮󠁧󠁿 <tr>️</tr>  England</a>
+                                        <a href="/odds/basketball/germany">🇩🇪󠁿 <tr>️</tr>  Germany</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tennis">
+                                <div class="dropdown">
+                                    <button class="dropbtn">🎾&nbsp;&nbsp;&nbsp;&nbsp;TENNIS</button>
+                                    <div class="dropdown-content">
+                                        <a href="/odds/tennis/england">🏴󠁧󠁢󠁥󠁮󠁧󠁿󠁿 <tr>️</tr>  England</a>
+                                        <a href="/odds/tennis/germany">🇩🇪󠁿 <tr>️</tr>  Germany</a>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </header>
+        </section>
+    </section>
+
+
+    <div class="main-searchbar-background">
+    </div>
+    <div class="last-trades">
+        <div class=second-header-left"><p>ODDS - SOCCER - ENGLAND</p>
+        </div>
+        <h4 class="date-header">date</h4>
+        <h4 class="link-header">link</h4>
+        <p class="date"></p>
+        <p class="link"></p>
+        <div id="contentContainer">
+        <!-- Fetched content will be displayed here -->
+        </div>
+        <script>
+            const url = '/api/odds/soccer/england/matches';
+                const headers = new Headers();
+                headers.append('Access-Control-Allow-Origin', 'http://arbitragebettors.com');
+
+                fetch(url, {
+                  headers: headers
+                })
+                .then(response => response.json())
+                .then(data => {
+                const latest6Items = data.slice(0, 100); // Extract the last 6 arrays
+
+                  latest6Items.forEach(user => {
+
+                    const linkURL = user.ab_link;
+                    const linkText = user.match;
+                    const linkMarkup = `<a href="${linkURL}">${linkText}<br></a>`;
+
+                    document.querySelector('.link').insertAdjacentHTML('beforeend', linkMarkup);
+
+                  });
+                })
+                .catch(error => {
+                  console.error('Error fetching data:', error);
+                });
+
+        </script>
+
+    </div>
+
+
+
+</body>
+</html>

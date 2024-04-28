@@ -1,0 +1,600 @@
+/* overall settings -- dark mode */
+body {
+    background-color: #081116; /*0c1b23, 081116, 0c161b*/
+    color: #f2f2f2; /*f2f2f2, */
+    font-family: 'Roboto', sans-serif; /* Consistent font */
+}
+body.bright-mode {
+    font-family: 'Roboto', sans-serif; /* Consistent font */
+        background-color: #081116; /*0c1b23, 081116, 0c161b*/
+    color: #f2f2f2; /*f2f2f2, */
+}
+
+
+.country-item:hover,
+.competition-item:hover,
+.menu-item:hover,
+.nav-button-events,
+.nav-button-details,
+.table-background {
+    background-color: #383838;
+}
+
+.tipster-competition-background,
+.sidebar,
+.match-background,
+.sub-menu,
+.details-background {
+    background-color: #0c161b;
+}
+.button-hover, .nav-button-events, .nav-button-details {
+    background-color: #000;
+}
+
+/* overall body settings -------------------------------------------------------------------------------- bright mode */
+body.bright-mode {
+    background-color: #F8F8F8;
+    color: #999999;
+    font-family: 'Roboto', sans-serif; /* Consistent font */
+}
+
+.bright-mode .sidebar,
+.bright-mode .sidebar a,
+.bright-mode .country-item,
+.bright-mode .competition-item,
+.bright-mode .sub-menu,
+.bright-mode .events-background,
+.bright-mode .match-background,
+.bright-mode .tipster-competition-background,
+.bright-mode .details-background  {
+    background-color: #FFFFFF;
+    color: #000;
+}
+
+.bright-mode .nav-button-events,
+.bright-mode .nav-button-details {
+    background-color: #eaeaea;
+    color: #000;
+}
+.bright-mode .event-item:hover {
+    background-color: #F8F8F8;
+    color: #000;
+}
+
+.bright-mode .match-background,
+.bright-mode .tipster-competition-background,
+.bright-mode .details-background,
+.bright-mode .table-background {
+    background-color: #FFFFFF;
+    text-decoration: none;
+    color: #000;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.07);
+}
+
+.bright-mode .menu-item:hover,
+.bright-mode .country-item:hover,
+.bright-mode .competition-item:hover {
+    background-color: #dbdbdb;
+    color: f2f2f2;
+}
+.bright-mode .events {
+    background-color: #F8F8F8;
+    color: #f2f2f2;
+}
+.bright-mode .event-item {
+    border-bottom: 1px solid #dbdbdb;
+}
+.bright-mode .nav-button-events:hover, .bright-mode .nav-button-events.active {
+  background-color: #48adff;
+}
+.bright-mode .nav-button-details:hover, .bright-mode .nav-button-details.active {
+  background-color: #48adff;
+}
+
+.bright-mode .nav-header .right-nav a {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #48adff;
+}
+.bright-mode .nav-header {
+      background-color: #071d44;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      position: fixed;
+      height: 55px;
+      top: 0;
+      width: 100%;
+      left: 0px;
+      border-bottom: 1px solid #48adff;
+      z-index: 20;
+}
+
+
+
+/* first navigation header ------------------------------------------------------------------------------------------ */
+.nav-logo {
+    position: relative; /* Ensure that absolute positioning is relative to this container */
+    height: 55px; /* Adjust to your needs, or remove if not needed */
+}
+.nav-logo img {
+    position: fixed;
+    top: -7px; /* Adjust this negative value to move the image up */
+    height: 75px; /* You may need to adjust this if the .nav-logo height is changed */
+    left: 20px; /* Move the image to the right; adjust 70px to the width of your logo */
+}
+.nav-header {
+      background-color: #002d46;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      position: fixed;
+      height: 55px;
+      top: 0;
+      width: 100%;
+      left: 0;
+      border-bottom: 1px solid #173e52;
+      z-index: 20;
+}
+.nav-header ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      letter-spacing: 0.1em;
+    }
+
+/* first navigation header -- left site */
+.nav-header .left-nav {
+      margin-left: 160px;
+}
+.nav-header .primary-nav .left-nav li {
+      font-size: 12px;
+      margin-right: 1%;
+    }
+.nav-header .primary-nav .left-nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0;
+      font-size: 14px;
+      transition: background-color 0.2s ease;
+      display: inline-block;
+      padding: 5px 10px;
+      position: relative;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+.nav-header .primary-nav .left-nav a:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: #fff;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+.nav-header .primary-nav .left-nav a:hover:after {
+      width: 80%;
+      left: 10%;
+    }
+
+/* first navigation header -- right site */
+.nav-header .right-nav {
+    position: absolute;
+    right: 0; /* Align to the right side */
+    margin-right: 2.5%;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.0em;
+}
+.nav-header .right-nav a {
+    border-radius: 26px;
+    padding: 6px 10px;
+    background-color: #081116;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #173e52;
+}
+
+
+
+
+/* sidebar ---------------------------------------------------------------------------------------------------------- */
+.sidebar {
+    /*position: absolute;*/
+    height: calc(100vh - 56px);
+    position: fixed;
+    width: 240px;
+    z-index: 8;
+    top: 56px;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: #ffffff; /* Set text color - white */
+}
+.sidebar-header {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    font-size: 14px; /* Adjust font size to match sidebar style */
+    padding-bottom: 5px;
+    border-bottom: 1.5px solid #999999; /* Dark grey underline */
+    color: #999999;
+}
+.sidebar a {
+    text-decoration: none; /* This removes underlines from links */
+    color: #ffffff; /* Set text color - white */
+}
+
+.settings-panel-odds {
+    position: fixed; /* Fixed position relative to the viewport */
+    top: 90px;
+    left: -1000px; /* Initially off-screen to the left */
+    width: 150px; /* Width of the panel */
+    height: 250px; /* Full viewport height */
+    background: #173e52; /* Background color */
+    margin-left: 240px;
+    border-radius: 10px; /* Right border for some visual separation */
+    z-index: -1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.07);
+}
+.settings-panel-odds.open {
+    left: 0; /* Slide in to be flush with the left edge of the viewport */
+    z-index: 2; /* Ensure it's above other elements */
+}
+.settings-panel-bookmakers {
+    position: fixed; /* Fixed position relative to the viewport */
+    top: 130px;
+    left: -1000px; /* Initially off-screen to the left */
+    width: 150px; /* Width of the panel */
+    height: 250px; /* Full viewport height */
+    background: #173e52; /* Background color */
+    margin-left: 240px;
+    border-radius: 10px; /* Right border for some visual separation */
+    z-index: -1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.07);
+}
+.settings-panel-bookmakers.open {
+    left: 0; /* Slide in to be flush with the left edge of the viewport */
+    z-index: 2; /* Ensure it's above other elements */
+}
+.settings-panel-language {
+    position: fixed; /* Fixed position relative to the viewport */
+    top: 60px;
+    left: -1000px; /* Initially off-screen to the left */
+    width: 450px; /* Width of the panel */
+    height: 200px; /* Full viewport height */
+    background: #173e52; /* Background color */
+    margin-left: 240px;
+    border-radius: 10px; /* Right border for some visual separation */
+    z-index: -1;
+}
+.settings-panel-language.open {
+    left: 0; /* Slide in to be flush with the left edge of the viewport */
+    z-index: 2; /* Ensure it's above other elements */
+}
+
+.menu-item {
+    padding: 10px 15px; /* Adjust padding to your preference */
+    text-decoration: none;
+    font-size: 13px; /* Adjust font size to match sidebar style */
+    display: block;
+    transition: background-color 0.1s; /* Smooth transition for hover effect */
+    cursor: pointer; /* Make all items clickable */
+    margin-left: 5px;
+    margin-right: 10px;
+    -webkit-user-select: none;  /* Safari */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* Internet Explorer/Edge */
+    user-select: none;
+}
+.menu-item:a {
+    text-decoration: none;
+}
+.menu-item .dropside-arrow {
+    position: absolute;
+    right: 25px; /* Adjust this value as needed, based on your sidebar width */
+    margin-top: 9px;
+    transform: translateY(-50%) rotate(270deg); /* Center the arrow vertically */
+    transition: transform 0.3s ease-in-out;
+    color: #999999;
+}
+.menu-item:hover {
+    border-radius: 6px; /* Slightly rounded corners for the hover effect */
+}
+.menu-item .dropdown-arrow {
+    position: absolute;
+    right: 25px; /* Adjust this value as needed, based on your sidebar width */
+    margin-top: 9px;
+    transform: translateY(-50%) rotate(0deg); /* Center the arrow vertically */
+    transition: transform 0.3s ease-in-out;
+    color: #999999;
+}
+.menu-item .arrow-up {
+    transform: translateY(-50%) rotate(180deg); /* Make sure to keep the translateY value */
+}
+.menu-item:hover .dropdown-arrow {
+    background-color: transparent; /* Or match the hover background color if preferred */
+}
+
+.sub-menu {
+    display: none; /* Initially hidden */
+    -webkit-user-select: none;  /* Safari */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* Internet Explorer/Edge */
+    user-select: none;
+}
+.country-item {
+    padding: 6px 10px;
+    text-decoration: none;
+    font-size: 13px; /* Adjust font size to match sidebar style */
+    display: block;
+    transition: background-color 0.1s; /* Smooth transition for hover effect */
+    cursor: pointer; /* Make all items clickable */
+    margin-left: 15px;
+    margin-right: 10px;
+}
+.country-item:hover {
+    border-radius: 6px;
+}
+.flag-icon {
+    width: 25px; /* Adjust as needed */
+    height: 12px; /* This will maintain the aspect ratio */
+    margin-right: 8px; /* Adjust as needed */
+    margin-left: 0px;
+}
+
+.competition-item {
+    padding: 6px 15px 6px 15px;
+    text-decoration: none;
+    font-size: 13px; /* Adjust font size to match sidebar style */
+    display: block;
+    transition: background-color 0.1s; /* Smooth transition for hover effect */
+    cursor: pointer; /* Make all items clickable */
+    margin-left: 50px;
+    margin-right: 10px;
+}
+.competition-item:hover {
+    border-radius: 6px;
+}
+
+
+/* container -------------------------------------------------------------------------------------------------------- */
+.events {
+    position: absolute;
+    top: 56px;
+    left: 240px;
+    right: 0px;
+    bottom: 80px; /* Increase this value to create more space at the bottom */
+}
+
+
+.competition-navigation {
+    position: absolute;
+    top: 10px;
+    left: 3%;
+    font-size: 14px;
+    color: #999999;
+}
+/* competition */
+.tipster-competition-background {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: left; /* Center children horizontally */
+    position: absolute;
+    top: 15px;
+    left: 3%;
+    right: 2.5%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+}
+.tipster-competition-header {
+    font-size: 16px;
+    color: #999999;
+    margin-top: 15px; /* Adjust as needed */
+    margin-left: 2.5%;
+}
+.competition-info-img {
+    margin-top: 15px;
+    width: 90%; /* Make the image full width of the container */
+    height: auto; /* Keep the image's aspect ratio */
+    margin-left: 5%;
+    border-top-left-radius: 6px; /* Rounded upper left corner */
+    border-top-right-radius: 6px;
+}
+
+
+.competition-switch {
+  display: flex;
+  width: 90%; /* Total width of the buttons together */
+  margin: 0 5%; /* Centers the buttons, assuming the container is 100% width */
+}
+
+.nav-button-events {
+  flex-grow: 1; /* Allows each button to grow and take up equal space */
+  padding: 10px 0; /* Adjust the padding as needed */
+  margin: 0;
+  border: none;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  margin-top: 1px;
+  box-sizing: border-box;
+}
+.nav-button-events:not(:last-child) {
+  margin-right: 0px; /* Add margin between buttons if not the last button */
+}
+.nav-button-events:hover, .nav-button-events.active {
+  background-color: #173e52;
+}
+
+
+
+
+/* events list */
+.events-background {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    position: relative;
+    border-radius: 0 0 10px 10px;
+    width: 90%;
+    left: 5%;
+    padding-top: 5px; /* Adjust as needed, make sure it covers the header */
+    padding-bottom: 30px; /* Adjust as needed */
+}
+.events-header {
+    font-size: 16px;
+    color: #999999;
+    align-self: center; /* No need for 'position: absolute' if .events-background is flex */
+    margin-bottom: 20px; /* Provide space between header and list */
+}
+.events-list {
+    width: 100%;
+    font-size: 13px;
+}
+.event-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+    transition: background-color 0.1s; /* Smooth transition for hover effect */
+}
+.event-item:hover {
+    cursor: pointer;
+    border-radius: 3px; /* Slightly rounded corners for the hover effect */
+    background-color: #111;
+}
+.event-item:last-child {
+    border-bottom: none;
+}
+.event-time,
+.match-teams {
+    margin-right: 10px;
+}
+
+
+/* match teaser */
+.match-background {
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    position: fixed;
+    flex-direction: column; /* Stack children vertically */
+    text-align: left;
+    top: 75px;
+    margin-top: 20px;
+    right: 2.5%;
+    border-radius: 10px;
+    width: 38%;
+    height: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+}
+.match-header {
+    font-size: 16px;
+    color: #999999;
+    margin-top: 15px; /* Adjust as needed */
+    margin-left: 5%;
+}
+.match-list {
+    position: relative;
+    top: 40px;
+    font-size: 14px;
+    width: 90%;
+    margin-left: 5%;
+}
+.match-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center; /* Center text horizontally for all children */
+}
+.date-time-container {
+    display: flex;
+    flex-direction: column; /* Stack time and date vertically */
+    align-items: center; /* Center align time and date */
+}
+.match-time {
+    min-width: 60px; /* Or any other width that suits the design */
+    text-align: center; /* Center the time within the element */
+}
+.home-team,
+.away-team {
+    flex: 1; /* Give each team equal flexibility to grow or shrink */
+    text-align: center; /* Center the text within the team element */
+    margin: 0 5px; /* Add margin for spacing */
+    margin-top: 0px;
+}
+
+
+
+
+
+/* other stuff ------------------------------------------------------------------------------------------------------ */
+/* match teaser loading screen */
+#loadingScreenEvents {
+    position: absolute;
+    top: 190px;
+    left: 40px;
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 46%;
+    background: rgba(255, 255, 255, 0.0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Make sure it's above other elements */
+    color: #000;
+}
+/* match teaser loading screen */
+#loadingScreenMatch {
+    position: absolute;
+    top: 170px; /* Adjust if necessary */
+    margin-top: 20px;
+    right: 40px;
+    border-radius: 10px;
+    width: 46%;
+    height: 150px; /* Match the height of the match background */
+    background: rgba(255, 255, 255, 0.0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Make sure it's above other elements */
+    color: #000;
+}
+/* match details loading screen */
+#loadingScreenDetails {
+    position: fixed;
+    top: 0px; /* Adjust if necessary */
+    left: 123px;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4; /* Make sure it's above other elements */
+    color: black;
+}
+.loader {
+      border: 5px solid #f3f3f3; /* Light grey */
+      border-top: 5px solid #3498db; /* Blue */
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+}
+@keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+}
+
+
+/* footer */

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Goji | Home
+  </title>
+  <meta content="3" name="next-head-count"/>
+  <link crossorigin="" href="https://use.typekit.net" rel="preconnect"/>
+  <link as="style" href="{{ url_for('static', filename='css/b61f0065e7184ad4.css') }}" rel="preload"/>
+  <link data-n-g="" href="{{ url_for('static', filename='css/b61f0065e7184ad4.css') }}" rel="stylesheet"/>
+  <link as="style" href="{{ url_for('static', filename='css/c7b33acdcfb6dd9c.css') }}" rel="preload"/>
+  <link data-n-p="" href="{{ url_for('static', filename='css/c7b33acdcfb6dd9c.css') }}" rel="stylesheet"/>
+  <style data-href="https://use.typekit.net/axp8pzs.css">
+   @import url("https://p.typekit.net/p.css?s=1&k=axp8pzs&ht=tk&f=139.175.5474.5475.25136.45407&a=153969475&app=typekit&e=css");@font-face{font-family:"proxima-nova";src:url("https://use.typekit.net/af/2555e1/00000000000000007735e603/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/2555e1/00000000000000007735e603/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/2555e1/00000000000000007735e603/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n7&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:700;font-stretch:normal}@font-face{font-family:"proxima-nova";src:url("https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:400;font-stretch:normal}@font-face{font-family:"proxima-nova";src:url("https://use.typekit.net/af/1be3c2/00000000000000007735e606/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/1be3c2/00000000000000007735e606/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/1be3c2/00000000000000007735e606/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n3&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:300;font-stretch:normal}@font-face{font-family:"proxima-nova";src:url("https://use.typekit.net/af/40d372/00000000000000007735e607/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i3&v=3") format("woff2"),url("https://use.typekit.net/af/40d372/00000000000000007735e607/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i3&v=3") format("woff"),url("https://use.typekit.net/af/40d372/00000000000000007735e607/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i3&v=3") format("opentype");font-display:auto;font-style:italic;font-weight:300;font-stretch:normal}@font-face{font-family:"proxima-nova";src:url("https://use.typekit.net/af/23e139/00000000000000007735e605/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/23e139/00000000000000007735e605/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/23e139/00000000000000007735e605/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n5&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:500;font-stretch:normal}@font-face{font-family:"ivypresto-display";src:url("https://use.typekit.net/af/343df8/00000000000000007735e5b3/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/343df8/00000000000000007735e5b3/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/343df8/00000000000000007735e5b3/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:400;font-stretch:normal}.tk-proxima-nova{font-family:"proxima-nova",sans-serif}.tk-ivypresto-display{font-family:"ivypresto-display",serif}
+  </style>
+ </head>
+ <body>
+  <div id="__next">
+   <div class="Navigation_navigation__eSStv">
+    <div class="Navigation_wrapper__yQJIS">
+     <div class="Navigation_logo__PsqaN">
+      <a href="/"><img alt="logo" src="/logo.svg"/></a>
+     </div>
+     <div class="Navigation_navlinks__uv5aW">
+      <a class="" href="/about">About</a>
+      <a class="" href="https://jobsinfootball.com/company/51411/moon-intelligence/">Careers</a>
+      <a class="" href="/insights">Insights</a>
+      <a class="" href="/contact">Contact</a>
+     </div>
+     <div class="Navigation_shadow__s3CYm">
+     </div>
+     <a class="Navigation_navlink__SUfAw">
+     </a>
+    </div>
+   </div>
+   <main class="min-h-screen home-main">
+    <div class="home-section-wrapper">
+     <div class="HeroSection_bg__R_Qvk mobile-only">
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:48px;top:20%;left:-50%">
+       <div class="HeroSection_corona__MYt_A HeroSection_blue__XYH88" style="width:48px;height:48px;opacity:0.4">
+        <div class="HeroSection_scrim__gQUB5" style="opacity:0">
+        </div>
+       </div>
+       <div class="HeroSection_comet__QmosW HeroSection_grey__wrfMc HeroSection_right__NLzvs HeroSection_size1__o6W1j" style="width:175px;top:26px;right:300px">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:138px;top:60%;opacity:0.6;right:105%">
+       <div class="HeroSection_corona__MYt_A HeroSection_blue__XYH88 HeroSection_right__NLzvs" style="width:138px;height:138px">
+        <div class="HeroSection_scrim__gQUB5" style="opacity:0">
+        </div>
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:100px;top:calc(60% + 67px);opacity:0.3;right:calc(250% + 1px)">
+       <div class="HeroSection_comet__QmosW HeroSection_blue__XYH88 HeroSection_right__NLzvs HeroSection_size2__sAqh_">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="top:7%;left:80%">
+       <div class="HeroSection_corona__MYt_A HeroSection_red__sBR4c" style="width:128px;height:128px">
+        <div class="HeroSection_scrim__gQUB5" style="opacity:0">
+        </div>
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:100px;top:calc(7% + 60px);left:235%">
+       <div class="HeroSection_comet__QmosW HeroSection_red__sBR4c HeroSection_left__oWXj1 HeroSection_size3__Ilg1x">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:180px;top:4%;right:85%;transform:scale(0.5) translateZ(0)">
+       <div class="HeroSection_comet__QmosW HeroSection_blue__XYH88 HeroSection_right__NLzvs HeroSection_size1__o6W1j">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:180px;top:12%;opacity:0.5;right:85%;transform:scale(0.5) translateZ(0)">
+       <div class="HeroSection_comet__QmosW HeroSection_blue__XYH88 HeroSection_right__NLzvs HeroSection_size0__ezr_u">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:180px;top:3%;opacity:0.35;right:85%;transform:scale(0.5) translateZ(0)">
+       <div class="HeroSection_comet__QmosW HeroSection_blue__XYH88 HeroSection_right__NLzvs HeroSection_size0__ezr_u">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:180px;top:58%;opacity:1;right:105%;transform:scale(0.5) translateZ(0)">
+       <div class="HeroSection_comet__QmosW HeroSection_red__sBR4c HeroSection_right__NLzvs HeroSection_size0__ezr_u">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57 desktop-only" style="width:180px;top:55%;right:105%">
+       <div class="HeroSection_comet__QmosW HeroSection_red__sBR4c HeroSection_right__NLzvs HeroSection_size2__sAqh_">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:80px;top:62%;opacity:0.3;right:105%;transform:scale(0.5) translateZ(0)">
+       <div class="HeroSection_comet__QmosW HeroSection_grey__wrfMc HeroSection_right__NLzvs HeroSection_size1__o6W1j">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:140px;top:10%;opacity:0.3;right:105%">
+       <div class="HeroSection_comet__QmosW HeroSection_grey__wrfMc HeroSection_right__NLzvs HeroSection_size1__o6W1j">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:180px;top:73%;opacity:0.5;left:105%">
+       <div class="HeroSection_comet__QmosW HeroSection_red__sBR4c HeroSection_left__oWXj1 HeroSection_size2__sAqh_">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:240px;top:71%;opacity:0.5;left:105%">
+       <div class="HeroSection_comet__QmosW HeroSection_grey__wrfMc HeroSection_left__oWXj1 HeroSection_size2__sAqh_">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:100px;top:13%;opacity:0.5;left:105%">
+       <div class="HeroSection_comet__QmosW HeroSection_red__sBR4c HeroSection_left__oWXj1 HeroSection_size2__sAqh_">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:100px;top:2%;opacity:0.35;left:105%">
+       <div class="HeroSection_comet__QmosW HeroSection_red__sBR4c HeroSection_left__oWXj1 HeroSection_size0__ezr_u">
+       </div>
+      </div>
+     </div>
+     <div class="HeroSection_bg__R_Qvk desktop-only">
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:176px;top:4%;left:110%">
+       <div class="HeroSection_corona__MYt_A HeroSection_blue__XYH88" style="width:176px;height:176px">
+        <div class="HeroSection_scrim__gQUB5" style="opacity:0">
+        </div>
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:176px;top:80%;left:30%">
+       <div class="HeroSection_corona__MYt_A HeroSection_blue__XYH88" style="width:176px;height:176px">
+        <div class="HeroSection_scrim__gQUB5" style="opacity:0">
+        </div>
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="top:5%;left:80%">
+       <div class="HeroSection_corona__MYt_A HeroSection_red__sBR4c" style="width:300px;height:300px">
+        <div class="HeroSection_scrim__gQUB5" style="opacity:0">
+        </div>
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:280px;top:49%;right:30%">
+       <div class="HeroSection_corona__MYt_A HeroSection_blue__XYH88 HeroSection_right__NLzvs" style="width:280px;height:280px">
+        <div class="HeroSection_scrim__gQUB5" style="opacity:1">
+        </div>
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:250px;top:calc(49% + 140px);right:40%">
+       <div class="HeroSection_comet__QmosW HeroSection_blue__XYH88 HeroSection_right__NLzvs HeroSection_size1__o6W1j" style="transform:translateX(-140px) translateZ(0)">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:250px;top:calc(5% + 146px);left:60%">
+       <div class="HeroSection_comet__QmosW HeroSection_red__sBR4c HeroSection_left__oWXj1 HeroSection_size1__o6W1j">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:250px;top:calc(5% + 146px);margin-left:40px;left:95%">
+       <div class="HeroSection_comet__QmosW HeroSection_red__sBR4c HeroSection_left__oWXj1 HeroSection_size3__Ilg1x">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:250px;top:90%;left:110%">
+       <div class="HeroSection_comet__QmosW HeroSection_red__sBR4c HeroSection_left__oWXj1 HeroSection_size1__o6W1j">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:420px;top:93%;left:110%">
+       <div class="HeroSection_comet__QmosW HeroSection_red__sBR4c HeroSection_left__oWXj1 HeroSection_size0__ezr_u">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:420px;top:3%;left:111%">
+       <div class="HeroSection_comet__QmosW HeroSection_red__sBR4c HeroSection_left__oWXj1 HeroSection_size0__ezr_u">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:420px;top:93%;left:35%">
+       <div class="HeroSection_comet__QmosW HeroSection_red__sBR4c HeroSection_left__oWXj1 HeroSection_size0__ezr_u">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:420px;top:calc(80% + 90px);margin-left:86px;left:35%">
+       <div class="HeroSection_comet__QmosW HeroSection_blue__XYH88 HeroSection_left__oWXj1 HeroSection_size1__o6W1j">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57 HeroSection_overlaycomet__jXsX7" style="width:420px;top:44%;left:-25%">
+       <div class="HeroSection_comet__QmosW HeroSection_blue__XYH88 HeroSection_right__NLzvs HeroSection_size3__Ilg1x">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:250px;top:55%;opacity:0.3;left:-20%">
+       <div class="HeroSection_comet__QmosW HeroSection_blue__XYH88 HeroSection_right__NLzvs HeroSection_size1__o6W1j">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:420px;top:12%;left:-20%">
+       <div class="HeroSection_comet__QmosW HeroSection_blue__XYH88 HeroSection_right__NLzvs HeroSection_size0__ezr_u">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:420px;top:5%;opacity:0.3;left:-40%">
+       <div class="HeroSection_comet__QmosW HeroSection_blue__XYH88 HeroSection_right__NLzvs HeroSection_size0__ezr_u">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:420px;top:13%;opacity:0.4;left:-40%">
+       <div class="HeroSection_comet__QmosW HeroSection_blue__XYH88 HeroSection_right__NLzvs HeroSection_size0_5__i1vMx">
+       </div>
+      </div>
+      <div class="HeroSection_comet-wrapper__VcS57" style="width:420px;top:20%;opacity:1;left:-40%">
+       <div class="HeroSection_comet__QmosW HeroSection_blue__XYH88 HeroSection_right__NLzvs HeroSection_size2__sAqh_">
+       </div>
+      </div>
+     </div>
+     <section class="HeroSection_section__lzz3a">
+      <h1>
+       <span style="opacity:0;margin-top:250px">
+        Service and distribute private funds at scale
+       </span>
+       <div class="HeroSection_comet-wrapper__VcS57 HeroSection_down-comet__dre7I" style="left:50%;margin-left:-29px;top:75px;opacity:0.5;width:0px">
+        <div class="HeroSection_comet__QmosW HeroSection_darkred__g7BTn HeroSection_down__JL_Uv HeroSection_size2__sAqh_">
+        </div>
+       </div>
+      </h1>
+     </section>
+    </div>
+    <div class="home-section-wrapper AboutSection_about__5eZx8">
+     <div class="AboutSection_bg__S6qTF mobile-only">
+      <div class="AboutSection_comet-wrapper__79hTF" style="top:75%;left:1%">
+       <div class="AboutSection_corona__MZCCM AboutSection_white__49_e8 AboutSection_right__mCI6Q" style="opacity:0.6;width:130px;height:130px">
+        <div class="AboutSection_scrim__2URwu" style="opacity:1">
+        </div>
+       </div>
+      </div>
+      <div class="AboutSection_comet-wrapper__79hTF" style="top:15%;left:99%">
+       <div class="AboutSection_corona__MZCCM AboutSection_white__49_e8 AboutSection_right__mCI6Q" style="opacity:0.1;width:80px;height:80px">
+       </div>
+      </div>
+      <div class="AboutSection_comet-wrapper__79hTF" style="width:280px;top:calc(75% + 65px);opacity:1;left:calc( 0% - 270px)">
+       <div class="AboutSection_comet__xk7lj AboutSection_red___PvXH AboutSection_right__mCI6Q AboutSection_size2__p7FuW">
+       </div>
+      </div>
+      <div class="AboutSection_comet-wrapper__79hTF" style="width:180px;top:calc(15% + 38px);opacity:1;left:calc( 99% - 5px)">
+       <div class="AboutSection_comet__xk7lj AboutSection_white__49_e8 AboutSection_left__eW7mC AboutSection_size2__p7FuW">
+       </div>
+      </div>
+      <div class="AboutSection_comet-wrapper__79hTF" style="width:80px;top:calc(65% + 1px);opacity:1;left:calc( 99% - 1px)">
+       <div class="AboutSection_comet__xk7lj AboutSection_white__49_e8 AboutSection_left__eW7mC AboutSection_size2__p7FuW">
+       </div>
+      </div>
+      <div class="AboutSection_comet-wrapper__79hTF" style="width:300px;top:10%;opacity:1;left:calc( 99% - 1px)">
+       <div class="AboutSection_comet__xk7lj AboutSection_red___PvXH AboutSection_left__eW7mC AboutSection_size2__p7FuW">
+       </div>
+      </div>
+      <div class="AboutSection_comet-wrapper__79hTF" style="width:120px;top:5%;opacity:1;right:calc( 99% - 1px)">
+       <div class="AboutSection_comet__xk7lj AboutSection_white__49_e8 AboutSection_right__mCI6Q AboutSection_size2__p7FuW">
+       </div>
+      </div>
+     </div>
+     <div class="AboutSection_bg__S6qTF desktop-only">
+      <div class="AboutSection_comet-wrapper__79hTF" style="top:39%;left:100%">
+       <div class="AboutSection_corona__MZCCM AboutSection_red___PvXH" style="opacity:0.6;width:344px;height:344px">
+       </div>
+      </div>
+      <div class="AboutSection_comet-wrapper__79hTF" style="width:344px;top:39%;left:0%">
+       <div class="AboutSection_corona__MZCCM AboutSection_white__49_e8 AboutSection_right__mCI6Q" style="width:344px;height:344px">
+        <div class="AboutSection_scrim__2URwu" style="opacity:1">
+        </div>
+       </div>
+      </div>
+      <div class="AboutSection_comet-wrapper__79hTF" style="width:500px;top:calc(39% + 160px);opacity:1;left:-20%">
+       <div class="AboutSection_comet__xk7lj AboutSection_red___PvXH AboutSection_right__mCI6Q AboutSection_size3__lnu3R">
+       </div>
+      </div>
+      <div class="AboutSection_comet-wrapper__79hTF" style="width:500px;top:calc(39% + 160px);opacity:1;left:-20%">
+       <div class="AboutSection_comet__xk7lj AboutSection_white__49_e8 AboutSection_right__mCI6Q AboutSection_size3__lnu3R">
+       </div>
+      </div>
+      <div class="AboutSection_comet-wrapper__79hTF" style="width:500px;top:20%;opacity:1;left:90%">
+       <div class="AboutSection_comet__xk7lj AboutSection_red___PvXH AboutSection_left__eW7mC AboutSection_size2__p7FuW">
+       </div>
+      </div>
+      <div class="AboutSection_comet-wrapper__79hTF" style="width:250px;top:21%;opacity:1;left:99%">
+       <div class="AboutSection_comet__xk7lj AboutSection_white__49_e8 AboutSection_left__eW7mC AboutSection_size2__p7FuW">
+       </div>
+      </div>
+      <div class="AboutSection_comet-wrapper__79hTF" style="width:250px;top:90%;opacity:1;right:99%">
+       <div class="AboutSection_comet__xk7lj AboutSection_white__49_e8 AboutSection_right__mCI6Q AboutSection_size2__p7FuW">
+       </div>
+      </div>
+      <div class="AboutSection_comet-wrapper__79hTF" style="width:550px;top:90%;opacity:1;right:99%">
+       <div class="AboutSection_comet__xk7lj AboutSection_red___PvXH AboutSection_right__mCI6Q AboutSection_size2__p7FuW">
+       </div>
+      </div>
+     </div>
+     <section class="AboutSection_section__iSJ_o">
+      <div class="AboutSection_flex-wrapper__SSUcC">
+       <h1 style="width:544px;position:relative;left:0px">
+        What We Do
+       </h1>
+       <p style="position:relative;top:150px">
+        Goji and Euroclear are building a global network for private funds, combining platform technology and financial markets infrastructure to create scalability and growth for its participants.
+       </p>
+       <div style="position:relative;top:120px">
+        <a class="readmore" href="/about">
+         About the network
+        </a>
+       </div>
+      </div>
+      <div>
+      </div>
+     </section>
+    </div>
+    <div class="home-section-wrapper WhySection_wrapper__ulfWV">
+     <div class="WhySection_bg__Wbscr mobile-only">
+     </div>
+     <div class="WhySection_bg__Wbscr desktop-only">
+      <div class="WhySection_comet-wrapper__11YOD" style="width:234px;top:72%;right:98%">
+       <div class="WhySection_corona__OY9ZU WhySection_white__Vl49s WhySection_right__IJHR9" style="width:234px;height:234px;opacity:0.3">
+        <div class="WhySection_scrim__WegEP" style="opacity:1">
+        </div>
+       </div>
+      </div>
+      <div class="WhySection_comet-wrapper__11YOD" style="width:250px;top:calc(72% + 106px);opacity:1;right:calc( 98% - 2px )">
+       <div class="WhySection_comet__SQlcV WhySection_red__dxetH WhySection_right__IJHR9 WhySection_size3__I6Qrk">
+       </div>
+      </div>
+      <div class="WhySection_comet-wrapper__11YOD" style="width:450px;top:calc(72% + 106px);opacity:1;right:calc( 98% - 2px )">
+       <div class="WhySection_comet__SQlcV WhySection_white__Vl49s WhySection_right__IJHR9 WhySection_size2__izplR">
+       </div>
+      </div>
+      <div class="WhySection_comet-wrapper__11YOD" style="width:126px;top:20px;left:calc(98% - 2px)">
+       <div class="WhySection_corona__OY9ZU WhySection_white__Vl49s WhySection_right__IJHR9" style="width:126px;height:126px;opacity:0.2">
+       </div>
+      </div>
+      <div class="WhySection_comet-wrapper__11YOD" style="width:272px;top:78px;opacity:1;left:calc( 98% - 2px )">
+       <div class="WhySection_comet__SQlcV WhySection_white__Vl49s WhySection_left__PKej2 WhySection_size2__izplR">
+       </div>
+      </div>
+      <div class="WhySection_comet-wrapper__11YOD" style="width:602px;top:128px;opacity:1;left:calc( 98% - 2px )">
+       <div class="WhySection_comet__SQlcV WhySection_red__dxetH WhySection_left__PKej2 WhySection_size1__CwTXA">
+       </div>
+      </div>
+     </div>
+     <section class="WhySection_section__8ZrEt">
+      <div class="WhySection_flex-wrapper__8WtZI">
+       <h1 style="width:400px;position:relative;left:0px">
+        Why Moon Intelligence?
+       </h1>
+       <h2 class="CometHeader_cometheader__7539O">
+        <div class="CometHeader_comet-wrapper__RgJls desktop-only" style="width:80px;top:12px;opacity:1;left:-200px">
+         <div class="CometHeader_comet__wswr1 CometHeader_red__YskCZ CometHeader_right__nLi_Q CometHeader_size2__uhARH">
+         </div>
+        </div>
+        <div class="CometHeader_comet-wrapper__RgJls mobile-only" style="width:80px;top:8px;opacity:1;left:-70px">
+         <div class="CometHeader_comet__wswr1 CometHeader_red__YskCZ CometHeader_right__nLi_Q CometHeader_size2__uhARH">
+         </div>
+        </div>
+        <span style="top:0;position:relative;left:0">
+         Our digitised network connects private fund supply to growing demand
+        </span>
+       </h2>
+       <div class="WhySection_missiongrid___g_L1">
+        <div class="WhySection_item__TxbxZ" style="position:relative;top:60px">
+         <img alt="" src="/whyicons/Group 284.svg"/>
+         <p>
+          Fully digitised investor onboarding, subscriptions, capital calls, distributions, and reporting
+         </p>
+        </div>
+        <div class="WhySection_seperator__4mRbz" style="top:0;position:relative;opacity:0">
+        </div>
+        <div class="WhySection_item__TxbxZ" style="position:relative;top:60px">
+         <img alt="" src="/whyicons/Group 285.svg"/>
+         <p>
+          Access to
+          <!-- -->
+          &gt;
+          <!-- -->
+          2,000 distributors and
+          <!-- -->
+          &gt;
+          <!-- -->
+          900 asset managers in the Euroclear funds network
+         </p>
+        </div>
+        <div class="WhySection_seperator__4mRbz" style="top:0;position:relative;opacity:0">
+        </div>
+        <div class="WhySection_item__TxbxZ" style="position:relative;top:60px">
+         <img alt="" src="/whyicons/Group 287.svg"/>
+         <p>
+          User experiences that drive client acquisition, expansion, and retention
+         </p>
+        </div>
+       </div>
+       <a class="readmore" href="/about">
+        Expore our platform
+       </a>
+      </div>
+     </section>
+    </div>
+    <div class="Footer_footer__Q5T55">
+      <div class="Footer_wrapper__fRar6">
+       <div class="Footer_navlinks__asLrJ">
+        <img alt="goji logo" src="/footerlogo.svg"/>
+        <a href="/legal">
+         DISCLOSURES &amp; PRIVACY POLICY
+        </a>
+       </div>
+       <div class="Footer_copyright__waMAS">
+        <p>
+         Goji is the trading name of Goji Administration Services Limited (CRN 10249853) and Goji Financial Services Limited (CRN 10234133). Both companies are registered in England and Wales with a registered address of Second Floor, 10-12 Alie Street, London, E1 8DE. Goji Financial Services Limited is authorised and regulated by the Financial Conduct Authority (FRN 805323).
+        </p>
+        <p>
+         Access to P2P services, facilitated by Goji, are provided by Modulr FS Limited. Find out more about electronic money authorisation and regulation
+         <a href="disclosures/disclosures-modulr-information">
+          here.
+         </a>
+        </p>
+        <p>
+         ©
+         <!-- -->
+         2024
+         <!-- -->
+         Copyright Goji Financial Services Limited 2023. All rights reserved.
+        </p>
+       </div>
+      </div>
+    </div>
+   </main>
+  </div>
+ </body>
+</html>

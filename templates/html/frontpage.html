@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Moon Intelligence | Home
+  </title>
+  <meta content="3" name="next-head-count"/>
+    <link rel="icon" type="image/svg+xml" href="/media/smalllogo">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/frontpage.css') }}">
+  <link crossorigin="" href="https://use.typekit.net" rel="preconnect"/>
+  <style data-href="https://use.typekit.net/axp8pzs.css">
+   @import url("https://p.typekit.net/p.css?s=1&k=axp8pzs&ht=tk&f=139.175.5474.5475.25136.45407&a=153969475&app=typekit&e=css");@font-face{font-family:"proxima-nova";src:url("https://use.typekit.net/af/2555e1/00000000000000007735e603/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/2555e1/00000000000000007735e603/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/2555e1/00000000000000007735e603/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n7&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:700;font-stretch:normal}@font-face{font-family:"proxima-nova";src:url("https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:400;font-stretch:normal}@font-face{font-family:"proxima-nova";src:url("https://use.typekit.net/af/1be3c2/00000000000000007735e606/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/1be3c2/00000000000000007735e606/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/1be3c2/00000000000000007735e606/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n3&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:300;font-stretch:normal}@font-face{font-family:"proxima-nova";src:url("https://use.typekit.net/af/40d372/00000000000000007735e607/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i3&v=3") format("woff2"),url("https://use.typekit.net/af/40d372/00000000000000007735e607/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i3&v=3") format("woff"),url("https://use.typekit.net/af/40d372/00000000000000007735e607/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i3&v=3") format("opentype");font-display:auto;font-style:italic;font-weight:300;font-stretch:normal}@font-face{font-family:"proxima-nova";src:url("https://use.typekit.net/af/23e139/00000000000000007735e605/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/23e139/00000000000000007735e605/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/23e139/00000000000000007735e605/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n5&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:500;font-stretch:normal}@font-face{font-family:"ivypresto-display";src:url("https://use.typekit.net/af/343df8/00000000000000007735e5b3/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/343df8/00000000000000007735e5b3/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/343df8/00000000000000007735e5b3/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:400;font-stretch:normal}.tk-proxima-nova{font-family:"proxima-nova",sans-serif}.tk-ivypresto-display{font-family:"ivypresto-display",serif}
+  </style>
+</head>
+<body>
+   <div class="Navigation_navigation__eSStv">
+    <div class="Navigation_wrapper__yQJIS">
+     <div class="Navigation_logo__PsqaN">
+      <a href="/"><img alt="logo" src="/media/smalllogo"/></a>
+     </div>
+     <div class="Navigation_navlinks__uv5aW">
+      <a class="" href="/about">About</a>
+      <a class="" href="https://jobsinfootball.com/company/51411/moon-intelligence/">Careers</a>
+      <a class="" href="/insights">Insights</a>
+      <a class="" href="/contact">Contact</a>
+     </div>
+     <div class="Navigation_shadow__s3CYm">
+     </div>
+     <a class="Navigation_navlink__SUfAw">
+     </a>
+    </div>
+   </div>
+
+    <main class="min-h-screen home-main">
+
+
+    </main>
+
+
+
+
+
+<script>
+    document.querySelector('.Navigation_navlink__SUfAw').addEventListener('click', function() {
+        var navigationContainer = document.querySelector('.Navigation_navigation__eSStv');
+        navigationContainer.classList.toggle('Navigation_open__Z9JaI');
+    });
+</script>
+
+
+
+
+<footer>
+    <div class="footer"></div>
+</footer>
+
+</body>
+</html>
