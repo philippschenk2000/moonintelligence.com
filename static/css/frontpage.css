@@ -25,22 +25,22 @@ p {
     font-family: proxima-nova,sans-serif
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     body {
-        font-size:16px;
+        font-size:20px;
         font-weight: 400;
         font-family: proxima-nova,sans-serif
     }
     h1 {
-        font-size: 32px;
+        font-size: 36px;
         line-height: 34px
     }
     h2 {
-        font-size: 18px;
+        font-size: 24px;
         line-height: 24px
     }
     p {
-        font-size: 16px
+        font-size: 18px
     }
     ul {
         margin-bottom: 3rem
@@ -177,19 +177,8 @@ p {
     overflow-x: hidden;
 }
 
-/* SECTION 1 -------------------------------------------------------------------------------- */
-.section_1_back {
-    left: 0px;
-    right: 0px;
-    top: 0vh; /* Start at the top of the viewport */
-    position: absolute;
-    height: 100vh;
-    background-color: #fff;
-    overflow: hidden; /* This prevents any overflow from the video or other content */
-}
-
 .background-video {
-    position: absolute;
+    position: fixed;
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
     width: 100%;
@@ -200,7 +189,7 @@ p {
 }
 
 .video-overlay {
-    position: absolute;
+    position: fixed;
     top: 66px;
     left: 0;
     width: 100%;
@@ -209,22 +198,35 @@ p {
     pointer-events: none; /* Allows interaction with the video beneath */
 }
 
+
+/* SECTION 1 -------------------------------------------------------------------------------- */
+.section_1_back {
+    left: 0px;
+    right: 0px;
+    top: 0vh; /* Start at the top of the viewport */
+    position: absolute;
+    height: 100vh;
+    overflow: hidden; /* This prevents any overflow from the video or other content */
+}
 .section_1 {
     left: 80px;
     right: 80px;
     position: absolute;
     color: #000;
-    top: 40vh; /* Positioned according to the viewport height */
+    height: 100vh; /* Height is specified to control the vertical space */
+    display: flex; /* Using flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
-
 .section_1_title {
-    text-align: center;
+    text-align: center; /* Ensures text is horizontally centered */
     color: #fff; /* Ensures title is visible over the video */
+    width: 100%; /* Ensures the title takes full width of the container for proper centering */
 }
-
 .colored-dot {
     color: #ff5355; /* Set the color to red, or choose another color as needed */
 }
+
 
 /* SECTION 2 -------------------------------------------------------------------------------- */
 .section_2_back {
@@ -232,8 +234,9 @@ p {
     right: 0px;
     top: 100vh; /* Starts immediately after section 1 */
     position: absolute;
-    height: 100vh;
+    height: 150vh;
     background-color: #011824;
+    z-index: 2; /* Ensures it stays behind other content but above the video */
 }
 .section_2 {
     left: 80px;
@@ -241,29 +244,65 @@ p {
     position: absolute;
     color: #fff;
 }
+.title-line1 {
+    max-width: 800px;
+    height: 1px;         /* Thickness of the line */
+    background-color: #fff; /* Color of the line, can be adjusted */
+    border: none;        /* Ensures there are no borders */
+    margin: 0;           /* Aligns the line with the start of the container */
+}
+.title-line2 {
+    width: 50%;          /* Line extends halfway across the container */
+    height: 1px;         /* Thickness of the line */
+    background-color: #ff5355; /* Color of the line, can be adjusted */
+    border: none;        /* Ensures there are no borders */
+    right: 0;           /* Aligns the line with the start of the container */
+}
 .section_2_title {
     margin-top: 100px;
     color: #ff5355;
 }
+.section_2_text {
+    max-width: 800px;
+}
+.about-button {
+    display: inline-block; /* Makes the link behave like a button */
+    color: #fff; /* White text */
+    text-align: center; /* Center text inside the button */
+    text-decoration: none; /* Removes underline from the link */
+    font-size: 14px; /* Appropriate text size for button */
+    margin-top: 20px; /* Space above the button */
+    transition: all .2s ease-in-out;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+.about-button:hover {
+    color: #ff5355; /* Darker shade of black on hover for visual feedback */
+}
+
 
 /* SECTION 3 -------------------------------------------------------------------------------- */
 .section_3_back {
-    left: 0px;
-    right: 0px;
-    top: 200vh; /* Starts immediately after section 1 */
-    position: absolute;
-    height: 100vh;
-    background-color: #fff;
-}
-.section_3 {
     left: 80px;
     right: 80px;
+    top: 180vh; /* Starts immediately after section 1 */
+    position: absolute;
+    height: 70vh;
+    background-color: #fff;
+    z-index: 2;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 10.2), 0 12px 48px rgba(0, 0, 0, 10.3); /* Enhanced shadow for visibility on dark background */
+}
+.section_3 {
+    left: 60px;
+    right: 60px;
     position: absolute;
     color: #000;
 }
 .section_3_title {
     margin-top: 100px;
-    text-align: right;
 }
 
 
@@ -271,7 +310,7 @@ p {
 .section_4_back {
     left: 0px;
     right: 0px;
-    top: 300vh; /* Starts immediately after section 1 */
+    top: 250vh; /* Starts immediately after section 1 */
     position: absolute;
     height: 100vh;
     background-color: #011824;
@@ -288,59 +327,33 @@ p {
 }
 
 
+/* SECTION 5 -------------------------------------------------------------------------------- */
+.section_5_back {
+    border-top: 0.5px solid #999;
+    left: 0px;
+    right: 0px;
+    top: 350vh; /* Starts immediately after section 1 */
+    position: absolute;
+    height: 30vh;
+    background-color: #011824;
+}
+.section_5 {
+    left: 80px;
+    right: 80px;
+    position: absolute;
+    color: #fff;
+}
+.section_5_title {
+    margin-top: 80px;
+    color: #ff5355;
+}
 
 
 
 /* FOOTER -------------------------------------------------------------------------------- */
-.Footer_footer__Q5T55 {
-    border-top: 0.5px solid #999;
-    box-shadow: 0 3px 6px 0 rgba(0,0,0,.16);
-    background-color: #011824;
-    color: #fff;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    top: 400vh;
-    position: absolute;
-}
-
-.Footer_wrapper__fRar6 {
-    max-width: 1600px;
-    padding: 0 80px;
-    display: grid;
-    grid-template-columns: 270px 1fr;
-    gap: 94px;
-    margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
-    font-family: proxima-nova,sans-serif;
-    font-weight: 300;
-    font-size: 14px
-}
-
-.Footer_navlinks__asLrJ {
-    display: block
-}
-
-.Footer_navlinks__asLrJ img {
-    margin-bottom: 30px
-}
-
-.Footer_navlinks__asLrJ a {
-    font-size: 14px;
-    padding: 0 20px;
-    border-left: 1px solid #fff;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #ff5355
-}
-
-.Footer_navlinks__asLrJ a:first-of-type {
-    padding-left: 0;
-    border-left: 0 solid transparent
-}
-
-.Footer_copyright__waMAS p {
-    font-size: 14px;
-    line-height: 18px
+@media only screen and (max-width: 600px) {
+    .section_1, .section_2, .section_3_back, .section_4, .section_5 {
+        left: 20px; /* Reduced left margin for better space utilization */
+        right: 20px; /* Reduced right margin for better space utilization */
+    }
 }
