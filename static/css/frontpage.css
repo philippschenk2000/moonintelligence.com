@@ -233,7 +233,7 @@ p {
     top: 100vh; /* Starts immediately after section 1 */
     position: absolute;
     height: 100vh;
-    background-color: #021329;
+    background-color: #011824;
 }
 .section_2 {
     left: 80px;
@@ -274,7 +274,7 @@ p {
     top: 300vh; /* Starts immediately after section 1 */
     position: absolute;
     height: 100vh;
-    background-color: #021329;
+    background-color: #011824;
 }
 .section_4 {
     left: 80px;
@@ -295,7 +295,7 @@ p {
 .Footer_footer__Q5T55 {
     border-top: 0.5px solid #999;
     box-shadow: 0 3px 6px 0 rgba(0,0,0,.16);
-    background-color: #021329;
+    background-color: #011824;
     color: #fff;
     padding-top: 70px;
     padding-bottom: 70px;
