@@ -48,6 +48,23 @@ p {
 
 
 /* navigation settings -------------------------------------------------------------------------------- */
+.Navigation_logo__PsqaN {
+    display: inline-block; /* or 'block' if you prefer */
+    width: 120px; /* The width of the image display area */
+    height: 60px; /* The height of the image display area */
+    overflow: hidden; /* Ensures only part of the img is shown */
+    position: relative; /* Allows absolute positioning relative to this container */
+}
+
+.Navigation_logo__PsqaN img {
+    position: absolute;
+    top: 50%; /* Centers the image vertically */
+    left: 50%; /* Centers the image horizontally */
+    width: auto; /* Maintains the image's aspect ratio */
+    height: 100%; /* Makes the image's height equal to the container's height */
+    transform: translate(-50%, -50%); /* Aligns the center of the image with the container's center */
+    object-fit: cover; /* Ensures the image covers the display area */
+}
 .Navigation_navigation__eSStv {
     height: 66px;
     box-shadow: 0 3px 6px 0 rgba(0,0,0,.16);
