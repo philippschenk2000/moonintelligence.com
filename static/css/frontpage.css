@@ -69,14 +69,14 @@ p {
     height: 66px
 }
 .Navigation_navlinks__uv5aW {
-    display: flex
+    display: flex;
 }
 .Navigation_navlinks__uv5aW a {
     height: 66px;
     line-height: 18px;
     display: grid;
     align-items: center;
-    padding: 0 30px;
+    padding: 0 25px;
     text-transform: uppercase;
     font-size: 14px;
     font-family: proxima-nova,sans-serif;
@@ -86,7 +86,7 @@ p {
     text-decoration: none;
     color: #021329;
     letter-spacing: 1.8px;
-    text-align: center
+    text-align: center;
 }
 .Navigation_navlinks__uv5aW a:hover {
     border-bottom: 2px solid #ce0d2a;
@@ -175,8 +175,6 @@ p {
     right: 0px;
     margin-bottom: 0px;
     overflow-x: hidden;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 }
 
 /* SECTION 1 -------------------------------------------------------------------------------- */
@@ -187,12 +185,41 @@ p {
     position: absolute;
     height: 100vh;
     background-color: #fff;
+    overflow: hidden;
+}
+.background-video {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    filter: brightness(60%) contrast(120%);
+}
+
+.video-overlay {
+    position: absolute;
+    top: 66px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 66px);
+    background-color: rgba(2, 19, 41, 0.45);
+    pointer-events: none; /* Allows interaction with the video beneath */
 }
 .section_1 {
     left: 80px;
     right: 80px;
     position: absolute;
     color: #000;
+    top: 40vh;
+}
+.section_1_title {
+    text-align: center;
+    color: #fff;
+}
+.colored-dot {
+    color: #ff5355; /* Set the color to red, or choose another color as needed */
 }
 
 /* SECTION 2 -------------------------------------------------------------------------------- */
@@ -236,7 +263,7 @@ p {
 
 
 /* SECTION 4 -------------------------------------------------------------------------------- */
-.section_3_back {
+.section_4_back {
     left: 0px;
     right: 0px;
     top: 300vh; /* Starts immediately after section 1 */
@@ -244,13 +271,13 @@ p {
     height: 100vh;
     background-color: #021329;
 }
-.section_3 {
+.section_4 {
     left: 80px;
     right: 80px;
     position: absolute;
     color: #fff;
 }
-.section_3_title {
+.section_4_title {
     margin-top: 100px;
     color: #ff5355;
 }

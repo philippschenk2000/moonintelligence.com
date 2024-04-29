@@ -10,7 +10,7 @@ def website_frontpage_css():
     return render_template("css/frontpage.css")
 @app.route('/media/smalllogo')
 def smalllogo():
-    with open("media/smalllogo.png", "rb") as f:
+    with open("media/1713527273184.jpg", "rb") as f:
         return f.read()
 
 @app.route('/2')
