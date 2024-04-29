@@ -14,11 +14,10 @@ h1,h2 {
     font-weight: 400;
 }
 h2 {
-    font-size: 32px
+    font-size: 32px;
+    font-family: proxima-nova,sans-serif
 }
-h1 {
-    font-size: 69px
-}
+
 p {
     font-size: 22px;
     font-weight: 300;
@@ -104,7 +103,7 @@ p {
 
 @media only screen and (max-width: 700px) {
     .Navigation_navigation__eSStv {
-        height:66px;
+        height: 66px;
         padding: 0 27px;
         box-shadow: none
     }
@@ -147,20 +146,24 @@ p {
         width: 90px;
         height: 66px;
         right: 0;
-        top: 0
+        top: 0;
+        cursor: pointer; /* Indicates the element is clickable */
     }
-    .Navigation_navlink__SUfAw:after,.Navigation_navlink__SUfAw:before {
+
+    .Navigation_navlink__SUfAw:after,
+    .Navigation_navlink__SUfAw:before {
         content: "";
         background-color: #ff5355;
         height: 1px;
         width: 35px;
         position: absolute;
-        top: 34px;
-        right: 31px
+        top: 29px;
+        right: 31px;
     }
+
     .Navigation_navlink__SUfAw:after {
         width: 17px;
-        top: 45px
+        top: 40px;
     }
 }
 
@@ -194,7 +197,7 @@ p {
     left: 0;
     width: 100%;
     height: calc(100vh - 66px); /* Calculating height minus the top offset */
-    background-color: rgba(2, 19, 41, 0.45);
+    background-color: rgba(2, 19, 41, 0.4);
     pointer-events: none; /* Allows interaction with the video beneath */
 }
 
@@ -222,6 +225,8 @@ p {
     text-align: center; /* Ensures text is horizontally centered */
     color: #fff; /* Ensures title is visible over the video */
     width: 100%; /* Ensures the title takes full width of the container for proper centering */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-size: 34px;
 }
 .colored-dot {
     color: #ff5355; /* Set the color to red, or choose another color as needed */
@@ -261,6 +266,8 @@ p {
 .section_2_title {
     margin-top: 100px;
     color: #ff5355;
+            font-size: 34px;
+
 }
 .section_2_text {
     max-width: 800px;
@@ -275,6 +282,7 @@ p {
     transition: all .2s ease-in-out;
     letter-spacing: 1.8px;
     text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .about-button:hover {
@@ -303,7 +311,15 @@ p {
 }
 .section_3_title {
     margin-top: 100px;
+    font-size: 34px;
 }
+@media only screen and (max-width: 1000px) {
+    .section_3_title {
+        margin-top: 70px;
+        font-size: 24px;
+    }
+}
+
 
 
 /* SECTION 4 -------------------------------------------------------------------------------- */
@@ -324,7 +340,37 @@ p {
 .section_4_title {
     margin-top: 100px;
     color: #ff5355;
+    font-size: 34px;
 }
+
+
+.section_4_articles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Space before the Learn More button */
+}
+.article-link {
+    display: block;
+    width: calc(50% - 20px); /* Adjust width for 2 articles side by side, accounting for gap */
+    text-decoration: none;
+    color: inherit; /* Inherits the text color */
+    margin-bottom: 0px; /* Space between articles */
+}
+.article-image {
+    height: 250px; /* Fixed height, or as desired */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px; /* Optional: if you want rounded corners */
+}
+.article-title {
+    font-size: 18px; /* Adjust as needed */
+    margin-top: 8px; /* Space between image and title */
+}
+.article-summary {
+    font-size: 14px; /* Adjust as needed */
+}
+
+
 
 
 /* SECTION 5 -------------------------------------------------------------------------------- */
@@ -332,28 +378,83 @@ p {
     border-top: 0.5px solid #999;
     left: 0px;
     right: 0px;
-    top: 350vh; /* Starts immediately after section 1 */
     position: absolute;
-    height: 30vh;
+    top: 350vh; /* Adjust if needed */
     background-color: #011824;
+    z-index: 2; /* Adjust z-index as needed */
 }
+
 .section_5 {
-    left: 80px;
-    right: 80px;
-    position: absolute;
-    color: #fff;
+    display: flex; /* Utilize flexbox layout */
+    justify-content: space-between; /* Separate left and right sections */
+    align-items: center; /* Vertically align items in the container */
+    padding: 1em; /* Adjust padding as needed */
+    height: 70px; /* Or adjust height as necessary */
 }
-.section_5_title {
-    margin-top: 80px;
-    color: #ff5355;
+
+.footer_left {
+    display: flex; /* Flex layout for items within .footer_left */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start of the flex container */
+    width: auto; /* Adjust width as necessary, or remove if not needed */
+    margin-left: 60px;
+}
+
+
+.social_links {
+    display: flex;
+    justify-content: space-between; /* Evenly distribute the links */
+    width: 100%; /* This will make sure the container takes the full width available */
+    max-width: 200px; /* Adjust this to match the actual width of your logo */
+}
+.social_icon {
+    text-decoration: none;
+    color: #fff; /* Or any other color */
+    /* Additional styles for the social links like font-size or custom icons */
+}
+.social_icon img {
+    height: 40px; /* Adjust the height as needed, the width will be set automatically to maintain aspect ratio */
+    vertical-align: middle; /* Aligns the image vertically with any adjacent text or inline elements */
+}
+.social_icon:first-child img {
+    border-top-left-radius: 6px; /* Rounded top left corner */
+    border-bottom-left-radius: 6px; /* Rounded bottom left corner */
+}
+
+.social_icon:last-child img {
+    border-top-right-radius: 6px; /* Rounded top right corner */
+    border-bottom-right-radius: 6px; /* Rounded bottom right corner */
+}
+
+.footer_right {
+    display: flex; /* Flex layout for .footer_right */
+    flex-direction: column; /* Stack paragraphs vertically */
+    align-items: flex-start; /* Align text to the start */
+    margin-left: 30px; /* Push .footer_right to the end of the .section_5 container */
+    width: 900px; /* Adjust width as needed */
+    color: #fff;
+    font-size: 14px;
+    position: relative; /* Changed from absolute to relative */
+    margin-right: 60px;
+}
+
+.footer_right p {
+    margin-top: 0px;
+    font-size: 14px;
 }
 
 
 
 /* FOOTER -------------------------------------------------------------------------------- */
 @media only screen and (max-width: 600px) {
-    .section_1, .section_2, .section_3_back, .section_4, .section_5 {
+    .section_1, .section_2, .section_3_back, .section_4 {
         left: 20px; /* Reduced left margin for better space utilization */
         right: 20px; /* Reduced right margin for better space utilization */
+    }
+    .footer_left {
+        margin-left: 0px;
+    }
+    .footer_right {
+        margin-right: 0px;
     }
 }

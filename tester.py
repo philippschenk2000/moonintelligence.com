@@ -12,6 +12,24 @@ def website_frontpage_css():
 def smalllogo():
     with open("media/1713527273184.jpg", "rb") as f:
         return f.read()
+@app.route('/media/article1')
+def article1():
+    with open("media/Novak-Djokovic4.jpg", "rb") as f:
+        return f.read()
+@app.route('/media/article2')
+def article2():
+    with open("media/20221216_1671176340-198.jpg", "rb") as f:
+        return f.read()
+@app.route('/media/linkedin')
+def linkedin():
+    with open("media/LinkedIn_logo_initials.png", "rb") as f:
+        return f.read()
+@app.route('/media/twitter')
+def twitter():
+    with open("media/409-4097837_transparent-background-twitter-logo-hd-png-download.png", "rb") as f:
+        return f.read()
+
+
 
 @app.route('/2')
 def website_frontpage2():
