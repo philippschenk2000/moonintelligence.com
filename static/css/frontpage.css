@@ -260,6 +260,11 @@ p {
     background-color: #011824;
     z-index: 2; /* Ensures it stays behind other content but above the video */
 }
+@media only screen and (max-width: 700px) {
+    .section_2_back {
+        height: 200vh;
+    }
+}
 .section_2 {
     left: 80px;
     right: 80px;
@@ -283,8 +288,7 @@ p {
 .section_2_title {
     margin-top: 100px;
     color: #ff5355;
-            font-size: 34px;
-
+    font-size: 34px;
 }
 .section_2_text {
     max-width: 800px;
@@ -320,6 +324,12 @@ p {
     text-align: center;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 10.2), 0 12px 48px rgba(0, 0, 0, 10.3); /* Enhanced shadow for visibility on dark background */
 }
+@media only screen and (max-width: 700px) {
+    .section_3_back {
+        top: 200vh; /* Starts immediately after section 1 */
+        height: 90vh;
+    }
+}
 .section_3 {
     left: 60px;
     right: 60px;
@@ -347,6 +357,12 @@ p {
     position: absolute;
     height: 100vh;
     background-color: #011824;
+}
+@media only screen and (max-width: 700px) {
+    .section_4_back {
+        top: 300vh; /* Starts immediately after section 1 */
+        height: 150vh;
+    }
 }
 .section_4 {
     left: 80px;
@@ -400,7 +416,11 @@ p {
     background-color: #011824;
     z-index: 2; /* Adjust z-index as needed */
 }
-
+@media only screen and (max-width: 700px) {
+    .section_5_back {
+        top: 450vh; /* Starts immediately after section 1 */
+    }
+}
 .section_5 {
     display: flex; /* Utilize flexbox layout */
     justify-content: space-between; /* Separate left and right sections */
