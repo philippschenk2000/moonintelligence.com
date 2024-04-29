@@ -185,16 +185,17 @@ p {
     position: absolute;
     height: 100vh;
     background-color: #fff;
-    overflow: hidden;
+    overflow: hidden; /* This prevents any overflow from the video or other content */
 }
+
 .background-video {
     position: absolute;
-    top: 55%;
-    left: 50%;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
     width: 100%;
-    height: auto;
+    height: 100%; /* Set height to 100% of its container */
     transform: translate(-50%, -50%);
-    object-fit: contain;
+    object-fit: cover; /* Ensures the video covers the full area, cropping as necessary */
     filter: brightness(60%) contrast(120%);
 }
 
@@ -203,21 +204,24 @@ p {
     top: 66px;
     left: 0;
     width: 100%;
-    height: calc(100vh - 66px);
+    height: calc(100vh - 66px); /* Calculating height minus the top offset */
     background-color: rgba(2, 19, 41, 0.45);
     pointer-events: none; /* Allows interaction with the video beneath */
 }
+
 .section_1 {
     left: 80px;
     right: 80px;
     position: absolute;
     color: #000;
-    top: 40vh;
+    top: 40vh; /* Positioned according to the viewport height */
 }
+
 .section_1_title {
     text-align: center;
-    color: #fff;
+    color: #fff; /* Ensures title is visible over the video */
 }
+
 .colored-dot {
     color: #ff5355; /* Set the color to red, or choose another color as needed */
 }
@@ -259,6 +263,7 @@ p {
 }
 .section_3_title {
     margin-top: 100px;
+    text-align: right;
 }
 
 
