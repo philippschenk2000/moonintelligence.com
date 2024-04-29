@@ -256,13 +256,13 @@ p {
     right: 0px;
     top: 100vh; /* Starts immediately after section 1 */
     position: absolute;
-    height: 150vh;
+    height: 1350px;
     background-color: #011824;
     z-index: 2; /* Ensures it stays behind other content but above the video */
 }
 @media only screen and (max-width: 700px) {
     .section_2_back {
-        height: 200vh;
+        height: 1500px;
     }
 }
 .section_2 {
@@ -315,9 +315,9 @@ p {
 .section_3_back {
     left: 80px;
     right: 80px;
-    top: 180vh; /* Starts immediately after section 1 */
+    top: 1600px; /* Starts immediately after section 1 */
     position: absolute;
-    height: 70vh;
+    height: 600px;
     background-color: #fff;
     z-index: 2;
     border-radius: 15px;
@@ -326,8 +326,8 @@ p {
 }
 @media only screen and (max-width: 700px) {
     .section_3_back {
-        top: 200vh; /* Starts immediately after section 1 */
-        height: 90vh;
+        top: 1300px; /* Starts immediately after section 1 */
+        height: 700px;
     }
 }
 .section_3 {
@@ -353,15 +353,15 @@ p {
 .section_4_back {
     left: 0px;
     right: 0px;
-    top: 250vh; /* Starts immediately after section 1 */
+    top: 2200px; /* Starts immediately after section 1 */
     position: absolute;
-    height: 100vh;
+    height: 1000px;
     background-color: #011824;
 }
 @media only screen and (max-width: 700px) {
     .section_4_back {
-        top: 300vh; /* Starts immediately after section 1 */
-        height: 150vh;
+        top: 2000px; /* Starts immediately after section 1 */
+        height: 1000px;
     }
 }
 .section_4 {
@@ -412,13 +412,13 @@ p {
     left: 0px;
     right: 0px;
     position: absolute;
-    top: 350vh; /* Adjust if needed */
+    top: 3100px; /* Adjust if needed */
     background-color: #011824;
     z-index: 2; /* Adjust z-index as needed */
 }
 @media only screen and (max-width: 700px) {
     .section_5_back {
-        top: 450vh; /* Starts immediately after section 1 */
+        top: 3000px; /* Starts immediately after section 1 */
     }
 }
 .section_5 {
