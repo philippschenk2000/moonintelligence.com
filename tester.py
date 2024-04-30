@@ -1,13 +1,19 @@
 from flask import Flask, render_template, send_file
 app = Flask(__name__)
 
-#rot: ff5355
+#rot: ff5355, blue: 61b9ea
 @app.route('/')
 def website_frontpage():
     return render_template("html/frontpage.html")
 @app.route('/css')
 def website_frontpage_css():
     return render_template("css/frontpage.css")
+@app.route('/about')
+def website_about():
+    return render_template("html/about.html")
+@app.route('/css/about')
+def website_about_css():
+    return render_template("css/about.css")
 @app.route('/media/smalllogo')
 def smalllogo():
     with open("media/1713527273184.jpg", "rb") as f:
@@ -27,6 +33,14 @@ def linkedin():
 @app.route('/media/twitter')
 def twitter():
     with open("media/409-4097837_transparent-background-twitter-logo-hd-png-download.png", "rb") as f:
+        return f.read()
+@app.route('/media/alexandre')
+def alexandre():
+    with open("media/3634.jpg", "rb") as f:
+        return f.read()
+@app.route('/media/sebastien')
+def sebastien():
+    with open("media/hvtxLD1y_400x400.jpg", "rb") as f:
         return f.read()
 
 
