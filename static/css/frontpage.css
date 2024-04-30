@@ -7,7 +7,7 @@ body {
     background: linear-gradient(to bottom,transparent,rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb))
 }
 a {
-    color: #ff5355
+    color: #61b9ea
 }
 h1,h2 {
     font-family: GTSuper;
@@ -105,11 +105,11 @@ p {
     text-align: center;
 }
 .Navigation_navlinks__uv5aW a:hover {
-    border-bottom: 2px solid #ce0d2a;
-    color: #ce0d2a
+    border-bottom: 2px solid #61b9ea;
+    color: #61b9ea
 }
 .Navigation_navlinks__uv5aW a.Navigation_active__1KqYp {
-    border-bottom: 2px solid #ce0d2a
+    border-bottom: 2px solid #61b9ea
 }
 .Navigation_shadow__s3CYm {
     display: none
@@ -170,7 +170,7 @@ p {
     .Navigation_navlink__SUfAw:after,
     .Navigation_navlink__SUfAw:before {
         content: "";
-        background-color: #ff5355;
+        background-color: #61b9ea;
         height: 1px;
         width: 35px;
         position: absolute;
@@ -246,7 +246,7 @@ p {
             font-size: 34px;
 }
 .colored-dot {
-    color: #ff5355; /* Set the color to red, or choose another color as needed */
+    color: #61b9ea; /* Set the color to red, or choose another color as needed */
 }
 
 
@@ -281,13 +281,13 @@ p {
 .title-line2 {
     width: 50%;          /* Line extends halfway across the container */
     height: 1px;         /* Thickness of the line */
-    background-color: #ff5355; /* Color of the line, can be adjusted */
+    background-color: #61b9ea; /* Color of the line, can be adjusted */
     border: none;        /* Ensures there are no borders */
     right: 0;           /* Aligns the line with the start of the container */
 }
 .section_2_title {
     margin-top: 100px;
-    color: #ff5355;
+    color: #61b9ea;
     font-size: 34px;
 }
 .section_2_text {
@@ -307,7 +307,7 @@ p {
 }
 
 .about-button:hover {
-    color: #ff5355; /* Darker shade of black on hover for visual feedback */
+    color: #61b9ea; /* Darker shade of black on hover for visual feedback */
 }
 
 
@@ -372,7 +372,7 @@ p {
 }
 .section_4_title {
     margin-top: 100px;
-    color: #ff5355;
+    color: #61b9ea;
     font-size: 34px;
 }
 

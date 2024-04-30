@@ -1,7 +1,7 @@
 from flask import Flask, render_template, send_file
 app = Flask(__name__)
 
-
+#rot: ff5355
 @app.route('/')
 def website_frontpage():
     return render_template("html/frontpage.html")
