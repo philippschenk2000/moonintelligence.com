@@ -14,6 +14,12 @@ def website_about():
 @app.route('/css/about')
 def website_about_css():
     return render_template("css/about.css")
+@app.route('/contact')
+def website_contact():
+    return render_template("html/contact.html")
+@app.route('/css/contact')
+def website_contact_css():
+    return render_template("css/contact.css")
 @app.route('/media/smalllogo')
 def smalllogo():
     with open("media/1713527273184.jpg", "rb") as f:
