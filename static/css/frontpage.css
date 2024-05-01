@@ -24,7 +24,7 @@ p {
     font-family: proxima-nova,sans-serif
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 760px) {
     body {
         font-size:20px;
         font-weight: 400;
@@ -118,7 +118,7 @@ p {
     displaY: none
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 760px) {
     .Navigation_navigation__eSStv {
         height: 66px;
         padding: 0 27px;
@@ -260,7 +260,7 @@ p {
     background-color: #011824;
     z-index: 2; /* Ensures it stays behind other content but above the video */
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 760px) {
     .section_2_back {
         height: 1400px;
     }
@@ -292,6 +292,11 @@ p {
 }
 .section_2_text {
     max-width: 800px;
+    text-align: justify;
+    text-align-last: left;  /* Align the last line to the left */
+    hyphens: auto;  /* Encourages hyphenation */
+    word-spacing: normal;  /* Default word spacing */
+    letter-spacing: normal;  /* Default letter spacing */
 }
 .about-button {
     display: inline-block; /* Makes the link behave like a button */
@@ -323,8 +328,9 @@ p {
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 10.2), 0 12px 48px rgba(0, 0, 0, 10.3); /* Enhanced shadow for visibility on dark background */
+
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 760px) {
     .section_3_back {
         top: 1450px; /* Starts immediately after section 1 */
         height: 700px;
@@ -335,14 +341,27 @@ p {
     right: 60px;
     position: absolute;
     color: #000;
+    display: flex;
+    flex-direction: column;  /* Stack children vertically */
+    justify-content: center;  /* Center vertically */
+    align-items: center;  /* Center horizontally */
+    height: 100%;  /* Adjust height as necessary to fill the container */
+    text-align: center;  /* Ensure text aligns center */
 }
 .section_3_title {
-    margin-top: 100px;
+    margin-top: 0px;
     font-size: 34px;
+}
+.section_3_text {
+    text-align: justify;
+    text-align-last: center;  /* Align the last line to the left */
+    hyphens: auto;  /* Encourages hyphenation */
+    word-spacing: normal;  /* Default word spacing */
+    letter-spacing: normal;  /* Default letter spacing */
 }
 @media only screen and (max-width: 1000px) {
     .section_3_title {
-        margin-top: 70px;
+        margin-top: 0px;
         font-size: 24px;
     }
 }
@@ -358,7 +377,7 @@ p {
     height: 1000px;
     background-color: #011824;
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 760px) {
     .section_4_back {
         top: 2170px; /* Starts immediately after section 1 */
         height: 1150px;
@@ -416,7 +435,7 @@ p {
     background-color: #011824;
     z-index: 2; /* Adjust z-index as needed */
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 760px) {
     .section_5_back {
         top: 3200px; /* Starts immediately after section 1 */
     }
@@ -484,7 +503,7 @@ p {
 
 /* FOOTER -------------------------------------------------------------------------------- */
 @media only screen and (max-width: 600px) {
-    .section_1, .section_2, .section_3_back, .section_4 {
+    .section_1, .section_2, .section_3_back, .section_3, .section_4 {
         left: 20px; /* Reduced left margin for better space utilization */
         right: 20px; /* Reduced right margin for better space utilization */
     }
