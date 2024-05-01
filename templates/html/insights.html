@@ -4,11 +4,11 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <title>
-   Moon Intelligence | Home
+   Moon Intelligence | Insights
   </title>
   <meta content="3" name="next-head-count"/>
     <link rel="icon" type="image/svg+xml" href="https://moonintelligence.com/sites/default/files/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/frontpage.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/insights.css') }}">
   <link crossorigin="" href="https://use.typekit.net" rel="preconnect"/>
   <style data-href="https://use.typekit.net/axp8pzs.css">
    @import url("https://p.typekit.net/p.css?s=1&k=axp8pzs&ht=tk&f=139.175.5474.5475.25136.45407&a=153969475&app=typekit&e=css");@font-face{font-family:"proxima-nova";src:url("https://use.typekit.net/af/2555e1/00000000000000007735e603/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/2555e1/00000000000000007735e603/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/2555e1/00000000000000007735e603/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n7&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:700;font-stretch:normal}@font-face{font-family:"proxima-nova";src:url("https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:400;font-stretch:normal}@font-face{font-family:"proxima-nova";src:url("https://use.typekit.net/af/1be3c2/00000000000000007735e606/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/1be3c2/00000000000000007735e606/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/1be3c2/00000000000000007735e606/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n3&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:300;font-stretch:normal}@font-face{font-family:"proxima-nova";src:url("https://use.typekit.net/af/40d372/00000000000000007735e607/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i3&v=3") format("woff2"),url("https://use.typekit.net/af/40d372/00000000000000007735e607/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i3&v=3") format("woff"),url("https://use.typekit.net/af/40d372/00000000000000007735e607/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i3&v=3") format("opentype");font-display:auto;font-style:italic;font-weight:300;font-stretch:normal}@font-face{font-family:"proxima-nova";src:url("https://use.typekit.net/af/23e139/00000000000000007735e605/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/23e139/00000000000000007735e605/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/23e139/00000000000000007735e605/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n5&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:500;font-stretch:normal}@font-face{font-family:"ivypresto-display";src:url("https://use.typekit.net/af/343df8/00000000000000007735e5b3/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/343df8/00000000000000007735e5b3/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/343df8/00000000000000007735e5b3/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:400;font-stretch:normal}.tk-proxima-nova{font-family:"proxima-nova",sans-serif}.tk-ivypresto-display{font-family:"ivypresto-display",serif}
@@ -35,46 +35,7 @@
     </div>
    </div>
     <main class="home-main">
-        <video class="background-video" autoplay muted playsinline loop>
-            <source src="https://videos.pexels.com/video-files/2249402/2249402-uhd_3840_2160_24fps.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="video-overlay"></div>
         <div class="section">
-            <div class="section_1_back">
-                <div class="section_1">
-                    <div class="section_1_title">
-                        <h1>Leveraging AI to predict sport outcomes<span class="colored-dot">.</span></h1>
-                    </div>
-                    <div class="section_1_text">
-                    </div>
-                </div>
-            </div>
-            <div class="section_2_back">
-                <div class="section_2">
-                    <div class="section_2_title">
-                        <hr class="title-line1"/>
-                        <h1>About</h1>
-                    </div>
-                    <div class="section_2_text">
-                        <p>Our team, composed of data scientists and sports experts, has developed unparalleled expertise in modeling professional sports leagues.</p>
-                        <p>At the core of our operations, we focus on harnessing top-tier data and employing advanced algorithms to maintain a competitive edge.</p>
-                        <p>We cater primarily to professional gamblers, ensuring close collaboration to provide the highest level of service possible.</p>
-                    </div>
-                    <a href="/about" class="about-button">Learn More</a> <!-- Button linking to the About page -->
-                </div>
-            </div>
-            <div class="section_3_back">
-                <div class="section_3">
-                    <div class="section_3_title">
-                        <hr class="title-line2"/>
-                        <h1>Why Moon Intelligence?</h1>
-                    </div>
-                    <div class="section_3_text">
-                        <p>We capitalize on advanced statistical models and machine learning to interpret the complexities of sports, providing deep analytical insights. Our technical capabilities are complemented by a sharp understanding of market dynamics and cooperative efforts with industry partners, enhancing decision-making and covering all aspects of what affects the outcome of sporting events. This allows us to be specialized in pricing risk through odds setting and offer robust risk management strategies to optimize betting outcomes and mitigate financial exposure.</p>
-                    </div>
-                </div>
-            </div>
             <div class="section_4_back">
                 <div class="section_4">
                     <div class="section_4_title">
@@ -99,7 +60,6 @@
                         </a>
                         <!-- More articles can be added in the same fashion -->
                     </div>
-                    <a href="/insights" class="about-button">Learn More</a> <!-- Button linking to the About page -->
                 </div>
             </div>
             <div class="section_5_back">

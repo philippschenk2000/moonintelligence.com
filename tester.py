@@ -14,6 +14,12 @@ def website_about():
 @app.route('/css/about')
 def website_about_css():
     return render_template("css/about.css")
+@app.route('/insights')
+def website_insights():
+    return render_template("html/insights.html")
+@app.route('/css/insights')
+def website_insights_css():
+    return render_template("css/insights.css")
 @app.route('/contact')
 def website_contact():
     return render_template("html/contact.html")
