@@ -264,7 +264,7 @@ p {
 .section_4_back {
     left: 0px;
     right: 0px;
-    top: 105vh; /* Starts immediately after section 1 */
+    top: 900px; /* Starts immediately after section 1 */
     position: absolute;
 }
 .section_4 {
@@ -335,6 +335,9 @@ p {
         top: 12vh; /* Start at the top of the viewport */
         height: 730px;
     }
+    .section_4_back {
+        top: 950px; /* Starts immediately after section 1 */
+    }
     .article-link {
         width: 280px; /* Take full width of the container to ensure it occupies its own row */
     }
@@ -354,6 +357,9 @@ p {
     .article-link {
         width: 280px; /* Take full width of the container to ensure it occupies its own row */
         margin: 20px; /* Reduced margin for tighter spaces */
+    }
+    .section_4_back {
+        top: 1000px; /* Starts immediately after section 1 */
     }
 }
 
