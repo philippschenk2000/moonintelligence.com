@@ -303,6 +303,8 @@ p {
     margin-bottom: 50px;
 }
 .container-workers {
+    max-width: 700px;
+    align-items: left; /* Vertically aligns the elements */
     display: block;
     min-width: 300px;
     width: calc(50% - 50px);
@@ -318,7 +320,6 @@ p {
 }
 /* Individual worker boxes */
 .worker-box {
-    align-items: center; /* Vertically aligns the elements */
     width: 100%; /* Set the width of each worker box to 45% of the container */
     margin: 20px; /* Margin around each worker box */
 }
