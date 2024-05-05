@@ -336,7 +336,7 @@ p {
         height: 730px;
     }
     .section_4_back {
-        top: 950px; /* Starts immediately after section 1 */
+        top: 930px; /* Starts immediately after section 1 */
     }
     .article-link {
         width: 280px; /* Take full width of the container to ensure it occupies its own row */
@@ -359,7 +359,7 @@ p {
         margin: 20px; /* Reduced margin for tighter spaces */
     }
     .section_4_back {
-        top: 950px; /* Starts immediately after section 1 */
+        top: 930px; /* Starts immediately after section 1 */
     }
 }
 
