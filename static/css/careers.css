@@ -230,7 +230,6 @@ p {
 }
 .section_4_text {
     margin-bottom: 50px;
-    max-width: 800px;
 }
 
 
@@ -239,9 +238,9 @@ p {
     right: 80px;
     margin: 20px auto;
     padding: 10px;
-    background-color: #f9f9f9;
+    background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 48px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 10.2), 0 12px 48px rgba(0, 0, 0, 10.3); /* Enhanced shadow for visibility on dark background */
 }
 .container-title {
     padding: 15px;
@@ -290,6 +289,75 @@ p {
 }
 
 
+
+/* Main container and layout */
+.component-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to move to the next line if there isn't enough space */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start; /* Aligns items to the top of the container */
+    margin: 0 auto; /* Centering the container */
+    padding: 0px 0px; /* Padding around the content */
+    gap: 50px; /* Sets space between the items both horizontally and vertically */
+    margin-bottom: 50px;
+}
+.container-workers {
+    display: block;
+    min-width: 300px;
+    width: calc(50% - 50px);
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 10.2), 0 12px 48px rgba(0, 0, 0, 10.3); /* Enhanced shadow for visibility on dark background */
+}
+@media only screen and (max-width: 850px) {
+    .container-workers {
+        width: 100%; /* Adjust width for 2 articles side by side, accounting for gap */
+    }
+}
+/* Individual worker boxes */
+.worker-box {
+    align-items: center; /* Vertically aligns the elements */
+    width: 100%; /* Set the width of each worker box to 45% of the container */
+    margin: 20px; /* Margin around each worker box */
+}
+
+/* Styling for images */
+.worker-box .image img {
+    width: calc(100% - 40px); /* Adjust width for 2 articles side by side, accounting for gap */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for the images */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow around images */
+}
+
+/* Worker name and position styles */
+.worker-box .name {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px; /* Space above the name */
+}
+
+.worker-box .uptitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px; /* Space below the title before the description starts */
+}
+
+.worker-box .description {
+    text-align: left; /* Center-align the description text */
+    color: #666;
+    font-size: 16px;
+    max-width: 80%; /* Limits the width of the text to improve readability */
+    line-height: 1.5; /* Line spacing for better readability */
+}
+
+/* Title of the section */
+.col-title h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 30px; /* Space below the section title */
+}
 
 /* SECTION 5 ------------------------------------------------------------------------------- */
 .section_5_back {
