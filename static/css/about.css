@@ -359,7 +359,7 @@ p {
         margin: 20px; /* Reduced margin for tighter spaces */
     }
     .section_4_back {
-        top: 1000px; /* Starts immediately after section 1 */
+        top: 950px; /* Starts immediately after section 1 */
     }
 }
 
