@@ -267,6 +267,7 @@ p {
 }
 .dropdown-icon {
     float: right;
+    margin-right: 25px;
     transition: transform 0.2s ease;
     color: #666
 }
