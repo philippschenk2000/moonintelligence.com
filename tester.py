@@ -20,6 +20,12 @@ def website_insights():
 @app.route('/css/insights')
 def website_insights_css():
     return render_template("css/insights.css")
+@app.route('/careers')
+def website_careers():
+    return render_template("html/careers.html")
+@app.route('/css/careers')
+def website_careers_css():
+    return render_template("css/careers.css")
 @app.route('/contact')
 def website_contact():
     return render_template("html/contact.html")

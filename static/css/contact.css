@@ -205,7 +205,6 @@ p {
     right: 0px;
     top: 0vh; /* Starts immediately after section 1 */
     position: absolute;
-    height: 1000px;
     background-color: #011824;
     z-index: 2; /* Ensures it stays behind other content but above the video */
 }
@@ -218,7 +217,7 @@ p {
     color: #fff;
 }
 .title-line1 {
-    max-width: 800px;
+    max-width: 400px;
     height: 1px;         /* Thickness of the line */
     background-color: #fff; /* Color of the line, can be adjusted */
     border: none;        /* Ensures there are no borders */
@@ -241,6 +240,7 @@ p {
 }
 .section_2_maps iframe {
     margin-top: 50px;
+        margin-bottom: 50px;
     margin-right: 80px;
     border-radius: 5px;
     width: calc(100% - 0px); /* Adjusts width to be 100% of parent width minus 80px */
@@ -258,7 +258,6 @@ p {
     left: 0px;
     right: 0px;
     position: absolute;
-    top: 1000px; /* Adjust if needed */
     background-color: #011824;
     z-index: 2; /* Adjust z-index as needed */
 }
@@ -328,12 +327,6 @@ p {
     .section_1, .section_2, .section_3_back, .section_4 {
         left: 20px; /* Reduced left margin for better space utilization */
         right: 20px; /* Reduced right margin for better space utilization */
-    }
-    .section_2_back {
-        height: 900px;
-    }
-    .section_5_back {
-        top: 900px; /* Adjust if needed */
     }
     .footer_left {
         margin-left: 0px;

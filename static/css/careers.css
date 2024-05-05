@@ -4,7 +4,7 @@ body {
     font-weight: 400;
     font-family: proxima-nova,sans-serif;
     color: rgb(var(--foreground-rgb));
-    background: linear-gradient(to bottom,transparent,rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb))
+    background: linear-gradient(to bottom,transparent,rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 a {
     color: #61b9ea
@@ -14,17 +14,19 @@ h1,h2 {
     font-weight: 400;
 }
 h2 {
-    font-size: 32px;
-    font-family: proxima-nova,sans-serif
+    font-family: proxima-nova,sans-serif;
+    color: #000;
 }
-
+ul {
+    font-size: 14px;
+}
 p {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 300;
     font-family: proxima-nova,sans-serif
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 800px) {
     body {
         font-size:20px;
         font-weight: 400;
@@ -118,7 +120,7 @@ p {
     displaY: none
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 800px) {
     .Navigation_navigation__eSStv {
         height: 66px;
         padding: 0 27px;
@@ -195,235 +197,97 @@ p {
     right: 0px;
     margin-bottom: 0px;
     overflow-x: hidden;
-}
-
-.background-video {
-    position: fixed;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    width: 100%;
-    height: 100%; /* Set height to 100% of its container */
-    transform: translate(-50%, -50%);
-    object-fit: cover; /* Ensures the video covers the full area, cropping as necessary */
-    filter: brightness(60%) contrast(120%);
-}
-
-.video-overlay {
-    position: fixed;
-    top: 66px;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 66px); /* Calculating height minus the top offset */
-    background-color: rgba(2, 19, 41, 0.4);
-    pointer-events: none; /* Allows interaction with the video beneath */
-}
-
-
-/* SECTION 1 -------------------------------------------------------------------------------- */
-.section_1_back {
-    left: 0px;
-    right: 0px;
-    top: 0vh; /* Start at the top of the viewport */
-    position: absolute;
-    height: 100vh;
-    overflow: hidden; /* This prevents any overflow from the video or other content */
-}
-.section_1 {
-    left: 80px;
-    right: 80px;
-    position: absolute;
-    color: #000;
-    height: 100vh; /* Height is specified to control the vertical space */
-    display: flex; /* Using flexbox to center content */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-}
-.section_1_title {
-    text-align: center; /* Ensures text is horizontally centered */
-    color: #fff; /* Ensures title is visible over the video */
-    width: 100%; /* Ensures the title takes full width of the container for proper centering */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-            font-size: 34px;
-}
-.colored-dot {
-    color: #61b9ea; /* Set the color to red, or choose another color as needed */
-}
-
-
-/* SECTION 2 -------------------------------------------------------------------------------- */
-.section_2_back {
-    left: 0px;
-    right: 0px;
-    top: 100vh; /* Starts immediately after section 1 */
-    position: absolute;
-    height: 1550px;
     background-color: #011824;
 }
-@media only screen and (max-width: 760px) {
-    .section_2_back {
-        height: 1400px;
-    }
-}
-.section_2 {
-    left: 80px;
-    right: 80px;
-    position: absolute;
-    color: #fff;
-}
-.title-line1 {
-    max-width: 850px;
-    height: 1px;         /* Thickness of the line */
-    background-color: #fff; /* Color of the line, can be adjusted */
-    border: none;        /* Ensures there are no borders */
-    margin: 0;           /* Aligns the line with the start of the container */
-}
-.title-line2 {
-    width: 50%;          /* Line extends halfway across the container */
-    height: 1px;         /* Thickness of the line */
-    background-color: #61b9ea; /* Color of the line, can be adjusted */
-    border: none;        /* Ensures there are no borders */
-    right: 0;           /* Aligns the line with the start of the container */
-}
-.section_2_title {
-    margin-top: 100px;
-    color: #61b9ea;
-    font-size: 34px;
-}
-.section_2_text {
-    max-width: 850px;
-    text-align: justify;
-    text-align-last: left;  /* Align the last line to the left */
-    hyphens: auto;  /* Encourages hyphenation */
-    word-spacing: normal;  /* Default word spacing */
-    letter-spacing: normal;  /* Default letter spacing */
-}
-.about-button {
-    display: inline-block; /* Makes the link behave like a button */
-    color: #fff; /* White text */
-    text-align: center; /* Center text inside the button */
-    text-decoration: none; /* Removes underline from the link */
-    font-size: 14px; /* Appropriate text size for button */
-    margin-top: 20px; /* Space above the button */
-    transition: all .2s ease-in-out;
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.about-button:hover {
-    color: #61b9ea; /* Darker shade of black on hover for visual feedback */
-}
-
-
-/* SECTION 3 -------------------------------------------------------------------------------- */
-.section_3_back {
-    left: 80px;
-    right: 80px;
-    top: 1400px; /* Starts immediately after section 1 */
-    position: absolute;
-    height: 600px;
-    background-color: #fff;
-    z-index: 2;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 10.2), 0 12px 48px rgba(0, 0, 0, 10.3); /* Enhanced shadow for visibility on dark background */
-
-}
-
-.section_3 {
-    left: 60px;
-    right: 60px;
-    position: absolute;
-    color: #000;
-    display: flex;
-    flex-direction: column;  /* Stack children vertically */
-    justify-content: center;  /* Center vertically */
-    align-items: center;  /* Center horizontally */
-    height: 100%;  /* Adjust height as necessary to fill the container */
-    text-align: center;  /* Ensure text aligns center */
-}
-.section_3_title {
-    margin-top: 0px;
-    font-size: 34px;
-}
-.section_3_text {
-    text-align: justify;
-    text-align-last: center;  /* Align the last line to the left */
-    hyphens: auto;  /* Encourages hyphenation */
-    word-spacing: normal;  /* Default word spacing */
-    letter-spacing: normal;  /* Default letter spacing */
-}
-@media only screen and (max-width: 1100px) {
-    .section_3_title {
-        margin-top: 0px;
-        font-size: 24px;
-    }
-    .section_3_back {
-        height: 700px;
-    }
-}
-@media only screen and (max-width: 800px) {
-    .section_3_back {
-        height: 750px;
-        top: 1450px;
-    }
-}
-
 
 /* SECTION 4 -------------------------------------------------------------------------------- */
 .section_4_back {
     left: 0px;
     right: 0px;
-    top: 2100px; /* Starts immediately after section 1 */
+    top: 0px; /* Starts immediately after section 1 */
     position: absolute;
-    height: 1000px;
     background-color: #011824;
-}
-@media only screen and (max-width: 800px) {
-    .section_4_back {
-        top: 2170px; /* Starts immediately after section 1 */
-        height: 1050px;
-    }
 }
 .section_4 {
     left: 80px;
     right: 80px;
+    top: 150px;
     position: absolute;
     color: #fff;
 }
+.title-line1 {
+    max-width: 400px;
+    height: 1px;         /* Thickness of the line */
+    background-color: #fff; /* Color of the line, can be adjusted */
+    border: none;        /* Ensures there are no borders */
+    margin: 0;           /* Aligns the line with the start of the container */
+}
+
 .section_4_title {
-    margin-top: 100px;
+    text-align: left; /* Centers text horizontally */
     color: #61b9ea;
     font-size: 34px;
 }
-
-
-.section_4_articles {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px; /* Space before the Learn More button */
-}
-.article-link {
-    display: block;
-    width: calc(50% - 20px); /* Adjust width for 2 articles side by side, accounting for gap */
-    text-decoration: none;
-    color: inherit; /* Inherits the text color */
-    margin-bottom: 0px; /* Space between articles */
-}
-.article-image {
-    height: 250px; /* Fixed height, or as desired */
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px; /* Optional: if you want rounded corners */
-}
-.article-title {
-    font-size: 18px; /* Adjust as needed */
-    margin-top: 8px; /* Space between image and title */
-}
-.article-summary {
-    font-size: 14px; /* Adjust as needed */
+.section_4_text {
+    margin-bottom: 50px;
+    max-width: 800px;
 }
 
+
+.container {
+    left: 80px;
+    right: 80px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 48px rgba(0, 0, 0, 0.3);
+}
+.container-title {
+    padding: 15px;
+    color: #666;
+}
+
+.accordion-title h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+.accordion-title div {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+.accordion-item {
+    padding: 15px;
+    transition: all .2s ease-in-out;
+            cursor: pointer;
+}
+.accordion-item:last-child {
+    border-bottom: none;
+}
+.dropdown-icon {
+    float: right;
+    transition: transform 0.2s ease;
+    color: #666
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    cursor: default;
+    padding: 0 15px;
+    color: #666;
+    border-top: 1px solid #ccc;
+    transition: max-height 0.2s ease-in-out, padding 0.2s ease-in-out;
+}
+.content-active .content {
+    max-height: 1000px; /* Adjust based on content size */
+    padding: 15px;
+}
+.content-active .dropdown-icon {
+    transform: rotate(180deg);
+}
 
 
 
@@ -433,15 +297,15 @@ p {
     left: 0px;
     right: 0px;
     position: absolute;
-    top: 3100px; /* Adjust if needed */
     background-color: #011824;
     z-index: 2; /* Adjust z-index as needed */
 }
-@media only screen and (max-width: 760px) {
-    .section_5_back {
-        top: 3200px; /* Starts immediately after section 1 */
+@media only screen and (max-width: 800px) {
+    .article-link {
+        width: 100%; /* Adjust width for 2 articles side by side, accounting for gap */
     }
 }
+
 .section_5 {
     display: flex; /* Utilize flexbox layout */
     justify-content: space-between; /* Separate left and right sections */
@@ -502,17 +366,6 @@ p {
 }
 
 
-@media (max-height: 700px) {
-    .section_3_back {
-        top: 1200px;
-    }
-    .section_4_back {
-        top: 1900px;
-    }
-    .section_5_back {
-        top: 3200px;
-    }
-}
 
 /* FOOTER -------------------------------------------------------------------------------- */
 @media only screen and (max-width: 600px) {

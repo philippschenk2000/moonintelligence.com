@@ -195,6 +195,7 @@ p {
     right: 0px;
     margin-bottom: 0px;
     overflow-x: hidden;
+    background-color: #011824;
 }
 
 /* SECTION 4 -------------------------------------------------------------------------------- */
@@ -203,8 +204,6 @@ p {
     right: 0px;
     top: 0px; /* Starts immediately after section 1 */
     position: absolute;
-    height: 1000px;
-    background-color: #011824;
 }
 .section_4 {
     left: 80px;
@@ -214,7 +213,7 @@ p {
     color: #fff;
 }
 .title-line1 {
-    max-width: 300px;
+    max-width: 400px;
     height: 1px;         /* Thickness of the line */
     background-color: #fff; /* Color of the line, can be adjusted */
     border: none;        /* Ensures there are no borders */
@@ -272,20 +271,12 @@ p {
     left: 0px;
     right: 0px;
     position: absolute;
-    top: 1000px; /* Adjust if needed */
     background-color: #011824;
     z-index: 2; /* Adjust z-index as needed */
 }
 @media only screen and (max-width: 800px) {
     .article-link {
         width: 100%; /* Adjust width for 2 articles side by side, accounting for gap */
-    }
-    .section_4_back {
-        top: 0px; /* Starts immediately after section 1 */
-        height: 1350px;
-    }
-    .section_5_back {
-        top: 1300px; /* Starts immediately after section 1 */
     }
 }
 
@@ -361,12 +352,5 @@ p {
     }
     .footer_right {
         margin-right: 0px;
-    }
-    .section_4_back {
-        top: 0px; /* Starts immediately after section 1 */
-        height: 1400px;
-    }
-    .section_5_back {
-        top: 1400px; /* Starts immediately after section 1 */
     }
 }
