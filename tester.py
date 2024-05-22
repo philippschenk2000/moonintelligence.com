@@ -69,7 +69,7 @@ def tipster():
     with open("media/pexels-canvastudio-3194523.jpg", "rb") as f:
         return f.read()
 
-# home: heights/tops/insights wie in insights
+
 
 @app.route('/2')
 def website_frontpage2():
