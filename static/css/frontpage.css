@@ -186,6 +186,7 @@ p {
 
 
 /* main settings -------------------------------------------------------------------------------- */
+
 .section {
     position: absolute;
     scroll-snap-align: start;
@@ -256,7 +257,7 @@ p {
     right: 0px;
     top: 100vh; /* Starts immediately after section 1 */
     position: absolute;
-    height: 1550px;
+    height: 1200px; /* Ensure the section2 is at least 100vh */
     background-color: #011824;
 }
 @media only screen and (max-width: 760px) {
@@ -319,7 +320,7 @@ p {
 .section_3_back {
     left: 80px;
     right: 80px;
-    top: 1400px; /* Starts immediately after section 1 */
+    top: calc(100vh + 500px); /* Starts immediately after section 1 */
     position: absolute;
     height: 600px;
     background-color: #fff;
@@ -353,19 +354,8 @@ p {
     word-spacing: normal;  /* Default word spacing */
     letter-spacing: normal;  /* Default letter spacing */
 }
-@media only screen and (max-width: 1100px) {
-    .section_3_title {
-        margin-top: 0px;
-        font-size: 24px;
-    }
-    .section_3_back {
-        height: 700px;
-    }
-}
 @media only screen and (max-width: 800px) {
     .section_3_back {
-        height: 750px;
-        top: 1450px;
     }
 }
 
@@ -374,15 +364,14 @@ p {
 .section_4_back {
     left: 0px;
     right: 0px;
-    top: 2100px; /* Starts immediately after section 1 */
+    bottom: -1200px; /* Starts immediately after section 1 */
     position: absolute;
-    height: 1000px;
     background-color: #011824;
+    z-index: 2;
+
 }
 @media only screen and (max-width: 800px) {
     .section_4_back {
-        top: 2170px; /* Starts immediately after section 1 */
-        height: 1050px;
     }
 }
 .section_4 {
@@ -425,22 +414,14 @@ p {
 }
 
 
-
-
 /* SECTION 5 ------------------------------------------------------------------------------- */
 .section_5_back {
     border-top: 0.5px solid #999;
+    margin-top: 50px;
     left: 0px;
     right: 0px;
     position: absolute;
-    top: 3100px; /* Adjust if needed */
-    background-color: #011824;
     z-index: 2; /* Adjust z-index as needed */
-}
-@media only screen and (max-width: 760px) {
-    .section_5_back {
-        top: 3200px; /* Starts immediately after section 1 */
-    }
 }
 .section_5 {
     display: flex; /* Utilize flexbox layout */
@@ -502,18 +483,6 @@ p {
 }
 
 
-@media (max-height: 700px) {
-    .section_3_back {
-        top: 1200px;
-    }
-    .section_4_back {
-        top: 1900px;
-        height: 1300px;
-    }
-    .section_5_back {
-        top: 3200px;
-    }
-}
 
 /* FOOTER -------------------------------------------------------------------------------- */
 @media only screen and (max-width: 600px) {
@@ -526,5 +495,21 @@ p {
     }
     .footer_right {
         margin-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .section_2_back {
+        height: 1300px;
+    }
+    .section_3_title {
+        margin-top: 0px;
+        font-size: 24px;
+    }
+    .section_3_back {
+        height: 700px;
+    }
+    .section_4_back{
+        top: calc(100vh + 1300px); /* Starts immediately after section 1 */
     }
 }

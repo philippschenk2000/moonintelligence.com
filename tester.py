@@ -60,8 +60,16 @@ def alexandre():
 def sebastien():
     with open("media/hvtxLD1y_400x400.jpg", "rb") as f:
         return f.read()
+@app.route('/media/analyst')
+def analyst():
+    with open("media/pexels-tima-miroshnichenko-7567434.jpg", "rb") as f:
+        return f.read()
+@app.route('/media/tipster')
+def tipster():
+    with open("media/pexels-canvastudio-3194523.jpg", "rb") as f:
+        return f.read()
 
-
+# home: heights/tops/insights wie in insights
 
 @app.route('/2')
 def website_frontpage2():
