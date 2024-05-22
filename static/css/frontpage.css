@@ -253,12 +253,13 @@ p {
 
 /* SECTION 2 -------------------------------------------------------------------------------- */
 .section_2_back {
-    left: 0px;
-    right: 0px;
+    left: 40px;
+    right: 40px;
     top: 100vh; /* Starts immediately after section 1 */
     position: absolute;
     height: 1200px; /* Ensure the section2 is at least 100vh */
     background-color: #011824;
+    border-radius: 15px;
 }
 @media only screen and (max-width: 760px) {
     .section_2_back {
@@ -486,6 +487,10 @@ p {
 
 /* FOOTER -------------------------------------------------------------------------------- */
 @media only screen and (max-width: 600px) {
+    .section_2_back {
+        left: 10px;
+        right: 10px;
+     }
     .section_1, .section_2, .section_3_back, .section_3, .section_4 {
         left: 20px; /* Reduced left margin for better space utilization */
         right: 20px; /* Reduced right margin for better space utilization */
